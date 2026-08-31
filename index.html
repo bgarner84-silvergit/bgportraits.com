@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brandon Garner Photography | Launching Soon</title>
+<meta name="description" content="Brandon Garner Photography — sports portraits and action photography. Launching soon. Join the early access list.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --black: #111111;
+    --white: #ffffff;
+    --off-white: #f7f6f4;
+    --gray: #6b6b6b;
+    --line: #e4e2de;
+    --red: #d4302f;
+    --max-width: 1080px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--white);
+    color: var(--black);
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .headline-font {
+    font-family: 'Oswald', Arial, sans-serif;
+    text-transform: uppercase;
+  }
+
+  /* Fade-in on load */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeIn 0.7s ease forwards;
+  }
+  .fade-in.d1 { animation-delay: 0.05s; }
+  .fade-in.d2 { animation-delay: 0.18s; }
+  .fade-in.d3 { animation-delay: 0.32s; }
+  .fade-in.d4 { animation-delay: 0.46s; }
+
+  @keyframes fadeIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .fade-in { animation: none; opacity: 1; transform: none; }
+  }
+
+  /* Header */
+  header {
+    padding: 28px 0;
+  }
+
+  header .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+  }
+
+  .logo .accent { color: var(--red); }
+
+  .header-tag {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gray);
+    font-weight: 500;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 70px 0 40px;
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--red);
+    font-weight: 600;
+    margin-bottom: 26px;
+  }
+
+  .eyebrow::before {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--red);
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: clamp(38px, 6.4vw, 78px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.01em;
+    max-width: 760px;
+  }
+
+  h1 .line-accent { color: var(--red); }
+
+  .hero-sub {
+    margin-top: 26px;
+    font-size: clamp(16px, 1.8vw, 19px);
+    color: var(--gray);
+    max-width: 540px;
+  }
+
+  /* Waitlist form */
+  .waitlist {
+    margin-top: 46px;
+    max-width: 520px;
+  }
+
+  .waitlist-label {
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--black);
+    margin-bottom: 14px;
+    display: block;
+  }
+
+  .form-note {
+    font-size: 12.5px;
+    color: var(--gray);
+    margin-top: 2px;
+  }
+
+  /* What's coming strip */
+  .focus-strip {
+    margin-top: 90px;
+    padding: 46px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .focus-strip .wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+
+  .focus-item .num {
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 13px;
+    color: var(--red);
+    letter-spacing: 0.08em;
+    font-weight: 600;
+  }
+
+  .focus-item h3 {
+    margin-top: 12px;
+    font-family: 'Oswald', Arial, sans-serif;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+  }
+
+  .focus-item p {
+    margin-top: 8px;
+    color: var(--gray);
+    font-size: 14.5px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 50px 0 40px;
+  }
+
+  footer .footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-bottom: 26px;
+  }
+
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 14px;
+    color: var(--gray);
+  }
+
+  .footer-contact a:hover { color: var(--black); }
+
+  .footer-legal {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+  }
+
+  .footer-legal a {
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  .footer-legal a:hover { color: var(--black); }
+
+  .footer-bottom {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    font-size: 12.5px;
+    color: var(--gray);
+  }
+
+  @media (max-width: 720px) {
+    .focus-strip .wrap { grid-template-columns: 1fr; gap: 34px; }
+    .footer-top { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo">Brandon Garner <span class="accent">Photography</span></a>
+    <span class="header-tag">Sports &amp; Action Photography</span>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow fade-in d1">Launching Soon</span>
+    <h1 class="headline-font fade-in d2">Get Early Access<br>To <span class="line-accent">Brandon Garner</span><br>Photography</h1>
+    <p class="hero-sub fade-in d3">Sports portraits and action photography built for athletes, teams, and programs who want images that actually feel like the moment. The site is on its way — join the early access list and be the first to know when booking opens.</p>
+
+    <div class="waitlist fade-in d4">
+      <span class="waitlist-label">Get Early Access</span>
+      <p class="form-note" style="font-size:15px; color:var(--black); margin-bottom:16px;">Have a question or want to be notified when booking opens? Click the chat button in the corner to reach out — that's the fastest way to hear back.</p>
+    </div>
+  </div>
+</section>
+
+<section class="focus-strip">
+  <div class="wrap">
+    <div class="focus-item">
+      <div class="num">01</div>
+      <h3>Game Day Coverage</h3>
+      <p>Full-game photography for teams and programs, delivered fast.</p>
+    </div>
+    <div class="focus-item">
+      <div class="num">02</div>
+      <h3>Athlete Portraits</h3>
+      <p>Individual sessions built for recruiting profiles, seniors, and standout portfolios.</p>
+    </div>
+    <div class="focus-item">
+      <div class="num">03</div>
+      <h3>Team Packages</h3>
+      <p>Season-long partnerships covering photo day, banners, and highlight galleries.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-contact">
+        <span class="logo" style="font-size:14px;">Brandon Garner <span class="accent">Photography</span></span>
+        <a href="tel:8179197658">817-919-7658</a>
+        <a href="mailto:bgarner84@gmail.com">bgarner84@gmail.com</a>
+      </div>
+      <div class="footer-legal">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; <span id="year"></span> Brandon Garner Photography. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+<!-- Go High Level / LeadConnector Chat Widget (required for A2P 10DLC SMS verification) -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a8658c77ecb78b58d4416a2"></script>
+
+</body>
+</html>
