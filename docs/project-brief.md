@@ -13,39 +13,58 @@ reads like an expensive ($10k-tier) custom build, not a template.
 
 ## Positioning
 
-- Niche, highly custom, one-on-one work with individual athletes.
-- **Not** bulk / high-volume / team sports photography. That is the competition,
-  not this.
-- Two buyers:
-  - **Parents** who want the high-quality human touch and fine-art prints.
-  - **Athletes** who want social-ready cutouts and assets they can run their
-    own AI on.
+- Niche, highly custom, one-on-one work with individual athletes. Every piece is
+  art-directed and composited for that one athlete — not a batch preset run
+  across a whole team.
+- Same dramatic sports-portrait *look* as the high-volume team shooters —
+  stadium light, atmosphere, action — but executed at a level they do not reach:
+  real retouching, custom composition, a finished hero piece built for the wall.
+  The differentiator is execution and one-on-one service, not a different genre.
+- Primary buyer: **parents** commissioning a standout hero portrait of their
+  athlete.
+- Deferred to later phases: the athlete-facing cutout / DIY-AI asset product,
+  and the black-and-white fine-art heirloom line (see decision 13).
 
 ## Content in hand
 
 - One shoot, one football player.
 - ~80+ frames: static portraits + action portraits.
-- All raw. Need background removal + polish before they are usable as assets.
-- No video. Open to generating short AI clips from stills, and to AI-generated
-  imagery that supports the sports-portrait look.
+- All raw. Need subject isolation, compositing, and polish before they are
+  usable as assets.
+- No video. Short AI clips from stills and AI-generated scene imagery are a
+  post-v1 idea only (decision 7).
 
 ## Pipeline (raw -> usable)
 
 1. Cull ~80 frames to a hero set (target 12–20).
-2. Edit the hero set: color, cleanup, background removal / subject isolation.
+2. Build the hero set: isolate the subject, composite onto an art-directed
+   background (stadium light, atmosphere, action), color-grade, retouch. This is
+   Photoshop compositing, not clean gallery isolation — the dramatic background
+   is the point (decision 11).
 3. Derivative assets:
    - Web: resize, compress, AVIF/WebP, responsive sizes. Fast, reliable load is
      a first-class requirement, not a finishing step.
    - Print: high-res masters held back, not published to the web.
-4. Optional: AI composites and short AI video from selected stills.
+4. Post-v1 only: AI scene composites and short AI video from selected stills.
 
 ## Delivery / service model
 
-- **Digital + cutouts** — transparent PNGs so athletes can do their own AI work.
-- **Parent premium** — finished retouched files and prints with a human touch.
+v1 (Direction A):
+
+- **The hero portrait** — one finished, art-directed composite per athlete,
+  delivered as a high-res digital file ready for print, plus web-sized copies.
 - **Large prints (16x20 and up)** — need true high resolution; AI upscales do
   not hold detail at that size, so these get professional treatment. Archival
-  paper; anti-reflection glass on framed pieces.
+  paper; anti-reflection glass on framed pieces. Presented as a service with an
+  inquiry path in v1 (decision 8).
+
+Later phases:
+
+- **Black-and-white fine-art heirloom line** — clean editorial isolation,
+  subject on black / white / subtle gradient, gallery prints. This is the former
+  Direction B (decision 13).
+- **Athlete cutout / DIY-AI assets** — transparent PNGs so athletes can run
+  their own AI work, with a self-serve delivery flow.
 
 ## Hosting & repo
 
@@ -79,22 +98,49 @@ automation convert leads into GoHighLevel.
 2. **v1 scope.** Single scrolling page — hero, portfolio, story, inquiry form
    into GoHighLevel. No store, no client galleries in v1.
 3. **Build stack.** Astro on Cloudflare Pages, in the existing GitHub repo.
-4. **Primary audience.** Parents paying for premium custom portraits and
-   fine-art prints.
+4. **Primary audience.** Parents paying for premium custom portraits. (Refined
+   by decision 12: the v1 product is the hero portrait; fine-art prints are a
+   Phase 2 inquiry path.)
 5. **Editing tools.** Lightroom + Photoshop (Firefly generative included).
    Enough for proper subject isolation and large-print retouch.
 6. **Cutout treatment.** Clean editorial isolation — subject on black / white /
-   subtle gradient.
+   subtle gradient. **Superseded by decision 11** for v1; this treatment moves
+   to the deferred heirloom line (decision 13).
 7. **AI tools available.** Firefly / Photoshop generative, plus Gemini / ChatGPT
-   image. No Midjourney, no video tools. AI video and heavy AI composites are
-   out of v1 on both budget and fit grounds.
+   image. No Midjourney, no video tools. Hero compositing in v1 is a Photoshop
+   job (see decision 11); AI-generated scenes and AI video stay out of v1 on
+   both budget and quality grounds.
 8. **Prints.** Phase 2. v1 presents prints as a service with an inquiry path.
 9. **Brand.** Full rebrand — new wordmark, type, and color. Boxed to a
    mini-system for v1 (see plan); full identity system is post-launch.
 10. **Timeline / budget.** ~4 weeks to v1 at 5–10 hrs/week. Under ~$50/mo —
     covered by the existing Adobe plan plus free Cloudflare Pages.
 
+## Decisions locked 2026-09-07 (session 2 — visual direction)
+
+These refine or supersede the list above.
+
+11. **Visual direction — Direction A.** v1 is the elevated hero-poster look:
+    dramatic, art-directed sports composites (stadium light, atmosphere, action),
+    one custom piece per athlete, executed well past what the high-volume team
+    shooters deliver. This **supersedes decision 6** — clean editorial isolation
+    is no longer the v1 treatment.
+12. **Audience within Direction A.** Still parents (decision 4 stands). The
+    product they buy is the hero portrait itself; fine-art prints stay a Phase 2
+    inquiry path (decision 8 stands).
+13. **Black-and-white fine-art heirloom line — deferred.** The clean-isolation,
+    gallery-print offer (former Direction B) becomes a later-phase secondary
+    product, not part of v1.
+14. **Wordmark — "Brandon Garner."** Personal name, not "BG Portraits." The
+    positioning is one-on-one work with him, so the name is the brand. Closes the
+    open question in `project-plan.md` Phase 1.
+15. **Site feel — sport, not pure gallery.** The site itself carries athletic
+    tension in typography, pacing, and motion — it should not read as a quiet
+    museum site. A dark base still applies; the energy comes from type and
+    composition, not from a busy background.
+
 ## Status
 
-Decisions locked. Sequenced build plan in `project-plan.md`. Next session
-starts at Phase 0.
+Repo prepared: `rebrand` branch created, Astro scaffolded at repo root, builds
+clean (see `repo-structure.md`). Visual direction locked (decisions 11–15).
+Next session starts at Phase 1 — brand mini-system.
