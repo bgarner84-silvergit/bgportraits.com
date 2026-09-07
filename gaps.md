@@ -27,8 +27,11 @@ resubmit the customer-care campaign.
 Decided 2026-09-01: building it out rather than taking the pre-launch-declaration
 shortcut the error text permits. The site has to become real anyway to convert
 the leads the SMS automation delivers, so declaring pre-launch would defer the
-work while risking a second denial. No mockup or design phase — rebuilding
-directly.
+work while risking a second denial.
+
+Updated 2026-09-07: the "no mockup or design phase" part is superseded. A design
+and planning phase is now in scope, built around a custom football shoot. See
+`project-brief.md`.
 
 **Not started.** Deferred to a later session.
 
