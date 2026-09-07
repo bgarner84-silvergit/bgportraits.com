@@ -1,0 +1,25 @@
+# build output
+dist/
+.output/
+
+# dependencies
+node_modules/
+
+# Astro
+.astro/
+
+# environment
+.env
+.env.production
+.env*.local
+
+# editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
+
+# print-resolution masters — keep out of the repo (see docs/project-plan.md, Phase 2)
+print-masters/
+*.psd
+*.tif
+*.tiff
