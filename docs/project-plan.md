@@ -13,19 +13,63 @@ Pages preview URL.
 
 ---
 
+## Status — start here (updated 2026-09-07, end of session 2)
+
+**Branch:** `rebrand`, pushed to GitHub. `main` still serves the live
+coming-soon site, untouched.
+
+**Done so far:**
+
+- Repo restructured: `docs/`, `design/`, Astro-ready `.gitignore`.
+- Astro scaffolded at repo root, builds clean (`npm run build`).
+- Visual direction locked — Direction A, dark base, sport feel, "Brandon Garner"
+  wordmark (`project-brief.md` decisions 11–15).
+- Brand mini-system done: `docs/brand.md` + style-tile artifact
+  (link in git log for commit `5b2ca0c`).
+- Image pipeline decided: `src/assets/portfolio/` + Astro `<Picture>`, no custom
+  script. Export specs and naming in that folder's README.
+- Likeness-release plain template drafted: `docs/likeness-release.md`.
+
+**Next task: cull the photos (Phase 2, step 1).** Steps for Brandon:
+
+1. In Lightroom, select all ~80 frames from the shoot.
+2. Export them as small JPEGs — long edge 1200px, quality 60 is fine — into a
+   new folder `design/cull/` in this repo. (Or export one contact-sheet PDF and
+   drop it in `design/cull/` instead.)
+3. Start a session and tell Claude the frames are in `design/cull/`.
+4. Claude ranks them and proposes a hero set of 12–16; Brandon makes the final
+   calls.
+5. Brandon composites and grades the chosen frames in Photoshop (stadium light,
+   atmosphere, grade to the `brand.md` palette), then exports web masters into
+   `src/assets/portfolio/` per that folder's README and commits.
+
+`design/cull/` is throwaway — it can be deleted or git-ignored once the hero set
+is chosen.
+
+**Also open (not blocking the cull):**
+
+- Get `docs/likeness-release.md` reviewed by a Texas attorney, then filled and
+  signed. Needed before any shoot photo goes public.
+- Stand up the second Cloudflare Pages project on the `rebrand` branch for a
+  preview URL (see `repo-structure.md`). Claude can walk through it.
+
+---
+
 ## Phase 0 — Rights & project setup
 **~2 hrs. Claude-led, one task for Brandon.**
 
-- [ ] Brandon: get a one-page likeness release signed by the athlete's parent/
-  guardian. Keep the SMS approval screenshot with it. (Claude will supply a
-  plain template.)
+- [~] Brandon: get a one-page likeness release signed by the athlete's parent/
+  guardian. Keep the SMS approval screenshot with it. Plain template supplied at
+  `docs/likeness-release.md` — needs a Texas attorney's review before use
+  (minor + intended for paid ads). Still to do: legal review, fill, sign.
 - [x] Claude: `rebrand` branch created; Astro scaffolded at repo root, builds
   clean; `docs/` and `design/` established; `.gitignore` added. See
   `repo-structure.md`. *(2026-09-07, session 2)*
 - [ ] Claude: confirm Cloudflare Pages builds from the repo — stand up the
   second Pages project pointed at the `rebrand` branch for a preview URL.
-- [ ] Establish `/public/assets` and an image-naming convention
-  (`portfolio-01-action.jpg`, etc.) in Phase 2.
+- [x] Image staging + naming convention established: `src/assets/portfolio/`
+  with a README (export specs + `NN-athlete-shot.jpg` naming). *(2026-09-07,
+  session 2)*
 - [x] `privacy.html`, `terms.html`, `widget-prechat.png` preserved (legal pages
   still at repo root untouched; `widget-prechat.png` moved to `docs/`).
 - **Working state:** Astro starter builds locally; legal pages still reachable.
@@ -59,14 +103,18 @@ the site *feel* is sport, not museum; energy from type, pacing, and motion.
   background is the point (brief decision 11); Firefly generative fill for
   cleanup and for extending or backing elements as needed.
 - Export two derivatives per image:
-  - **Web master:** long edge ~2400px, sRGB, uncompressed, into the repo staging
-    folder.
+  - **Web master:** long edge 2400px, sRGB, JPEG q90, into
+    `src/assets/portfolio/` (git-tracked). Full specs and naming in that
+    folder's README.
   - **Print master:** full resolution, kept local + backed up, **not** committed
     to the repo.
-- Claude: build a repo script that generates AVIF + WebP + JPG fallback at
-  responsive widths (640 / 1024 / 1600 / 2400) for every web master.
-- **Working state:** `/public/assets/portfolio/` holds optimized, responsive
-  image sets for the whole hero set.
+- Responsive variants (AVIF / WebP / JPEG at 640 / 1024 / 1600 / 2400) are
+  generated at build time by Astro's `<Picture>` / `astro:assets` (Sharp),
+  wired in Phase 3 — no standalone script. A pre-export script only returns if
+  the deferred athlete-asset product needs files outside the build.
+- **Working state:** `src/assets/portfolio/` holds the composited web masters
+  for the whole hero set, named and ordered; Astro produces the responsive sets
+  at build.
 
 ## Phase 3 — Site build
 **Two ~4 hr sessions. Claude-led.**
