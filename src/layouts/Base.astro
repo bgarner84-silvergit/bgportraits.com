@@ -16,7 +16,14 @@ interface Props {
 }
 
 const { title, description = site.description, minimalHeader = false } = Astro.props;
-const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
+const base = Astro.site ?? site.url;
+const canonical = new URL(Astro.url.pathname, base).href;
+/*
+ * Interim share card — brand type on the warm-black ground, no photograph.
+ * Replace public/og-default.png with a 1200×630 export off the strongest
+ * hero frame once the photo pass is done (docs/v1-review.md 4.1).
+ */
+const ogImage = new URL('/og-default.png', base).href;
 ---
 
 <!doctype html>
@@ -29,7 +36,6 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
 		<link rel="canonical" href={canonical} />
 
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" sizes="32x32" />
 		<meta name="theme-color" content="#000000" />
 
 		<meta property="og:type" content="website" />
@@ -37,7 +43,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
 		<meta property="og:url" content={canonical} />
+		<meta property="og:locale" content="en_US" />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="og:image:alt" content={site.name} />
 		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:image" content={ogImage} />
 	</head>
 	<body>
 		<a class="skip-link" href="#main">Skip to content</a>

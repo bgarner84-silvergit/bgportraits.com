@@ -7,8 +7,8 @@ import { packages } from '../data/packages';
 		<header class="packages__head">
 			<h2 class="t-section">Packages</h2>
 			<p class="t-body packages__intro">
-				Every session is quoted individually, because every piece is planned individually.
-				Tell me about your athlete and I will send pricing for the tier that fits.
+				Each piece is planned individually, so the prices below are starting points. Tell me
+				about your athlete and I'll confirm the details for the tier that fits.
 			</p>
 		</header>
 
@@ -16,8 +16,12 @@ import { packages } from '../data/packages';
 			{
 				packages.map((pkg) => (
 					<article class:list={['pkg', pkg.emphasis && 'pkg--emphasis']}>
-						{pkg.emphasis && <span class="t-label pkg__flag">Most chosen</span>}
+						{pkg.emphasis && <span class="t-label pkg__flag">Recommended</span>}
 						<h3 class="t-subhead pkg__name">{pkg.name}</h3>
+						<p class="pkg__price">
+							<span>From</span>
+							{pkg.price}
+						</p>
 						<p class="t-body pkg__summary">{pkg.summary}</p>
 
 						<ul class="pkg__list">
@@ -27,7 +31,7 @@ import { packages } from '../data/packages';
 						</ul>
 
 						<a class="pkg__cta t-label link-underline" href="#inquire">
-							Request pricing
+							Request a session
 						</a>
 					</article>
 				))
@@ -77,6 +81,27 @@ import { packages } from '../data/packages';
 
 	.pkg__flag {
 		color: var(--amber);
+	}
+
+	.pkg__price {
+		font-family: var(--font-display);
+		font-stretch: var(--width-condensed);
+		font-weight: 700;
+		font-size: var(--size-subhead);
+		letter-spacing: -0.01em;
+		color: var(--bone);
+		margin-top: -0.25rem;
+	}
+
+	/* "From" is set back in the text width, muted — the figure carries the weight. */
+	.pkg__price span {
+		font-family: var(--font-text);
+		font-stretch: var(--width-normal);
+		font-weight: 500;
+		font-size: var(--size-caption);
+		letter-spacing: 0;
+		color: var(--ash);
+		margin-inline-end: 0.4rem;
 	}
 
 	.pkg__summary {

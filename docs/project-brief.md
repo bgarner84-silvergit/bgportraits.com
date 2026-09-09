@@ -168,6 +168,16 @@ These refine or supersede the list above.
     `brand.md` type and colour system. CSS is written directly against the
     brand tokens.
 
+## Decisions locked 2026-09-09 (session 6 — review pass)
+
+23. **Publish starting prices — supersedes decision 18.** Each tier shows a
+    "From" figure: Future Star **$399**, Future Legend **$599**, Champion's
+    Legacy **$849**. Reasoning: silence reads as evasive rather than premium,
+    an unqualified inquiry is the most expensive thing given the 5–10 hr/week
+    budget, and a number filters before an evening is spent on a call. The
+    figure stays "from" because session length and travel vary; large prints
+    and framing outside the tiers remain quote-on-request (decision 8 stands).
+
 ## Status
 
 Repo prepared: `rebrand` branch created, Astro scaffolded at repo root, builds

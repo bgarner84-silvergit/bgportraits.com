@@ -3,11 +3,14 @@ import Legal from '../layouts/Legal.astro';
 import { site } from '../data/site';
 
 /*
- * Ported from the previous privacy.html, substance unchanged.
+ * Ported from the previous privacy.html. The "SMS / Text Messaging" section
+ * below is the wording that passed A2P 10DLC review — do not reword, shorten or
+ * reorder it without reading reference/a2p-10dlc-playbook.md first.
  *
- * The "SMS / Text Messaging" section below is the wording that passed A2P 10DLC
- * review. Do not reword, shorten or reorder it without reading
- * reference/a2p-10dlc-playbook.md first.
+ * Three lines outside that section were reconciled against what the site
+ * actually does (playbook §4: a policy describing mechanisms the site lacks is a
+ * reviewer flag) — no mailing list / unsubscribe link, no email captured by the
+ * widget, and no pre-launch "go live" notifications.
  */
 ---
 
@@ -26,7 +29,7 @@ import { site } from '../data/site';
 	<p>When you contact us or use the chat feature on this site, we may collect:</p>
 	<ul>
 		<li>Your name</li>
-		<li>Your email address</li>
+		<li>Your email address, if you email us directly</li>
 		<li>Your phone number, if you choose to provide it</li>
 		<li>Any messages you send us through our contact or chat forms</li>
 	</ul>
@@ -35,7 +38,7 @@ import { site } from '../data/site';
 	<p>We use the information you provide to:</p>
 	<ul>
 		<li>Respond to your inquiries and booking requests</li>
-		<li>Notify you when our site, booking, or services go live, if you have asked us to</li>
+		<li>Follow up about a session you have asked about, including availability, pricing, and scheduling</li>
 		<li>Send you updates about our photography services, if you have opted in</li>
 		<li>
 			Send text messages (SMS) related to your inquiry or booking, if you have provided your
@@ -68,9 +71,8 @@ import { site } from '../data/site';
 	<h2>Your Choices</h2>
 	<p>
 		You may opt out of text messages at any time by replying STOP, and reply HELP for help. If
-		you receive email from us, you can opt out by replying to ask us to remove you, or by using
-		the unsubscribe link where one is provided. You may also contact us directly to request
-		that we delete your information.
+		you email us, you can reply at any time to ask us to stop contacting you. You may also
+		contact us directly to request that we delete your information.
 	</p>
 
 	<h2>Data Security</h2>

@@ -13,7 +13,7 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-07, session 3)
+## Status — start here (updated 2026-09-09, session 6)
 
 **Branch:** `rebrand`, pushed to GitHub. `main` still serves the live
 coming-soon site, untouched.
@@ -31,9 +31,78 @@ and the review sheets in `design/cull/`. One swap recommended (`8926` →
 passing. Decisions taken with Brandon this session are recorded in
 `project-brief.md` decisions 16–22. Detail below under Phase 3.
 
-**Awaiting Brandon:** review the preview build, then stand up the second
-Cloudflare Pages project so there is a shareable preview URL, then approve
-the domain cutover. Nothing is committed yet.
+**Session 6 — review pass + copy revision.** Full review captured in
+`docs/v1-review.md` (ranked by value, not section). Brandon's calls this
+session:
+
+1. **Photo/retouch work → deferred to a dedicated follow-up session.** That
+   covers review items 1.1 (frame-edge masking failures on `05`, `07`, `09`,
+   `10`, `11` + no contact shadows), 1.4 (three near-identical visor poses;
+   alt text that describes the wrong frame), 3.1 (swap the template-style
+   hero image), 3.5 (repeated radial gradient), and the retouch note about
+   daytime-park reflections in visors.
+2. **Copy revised, and the three non-photo A2P-look items closed** (favicon,
+   `og:image`, published prices) — see "Done this session" below.
+3. **Prices are now public** — `$399 / $599 / $849` "from" figures
+   (`project-brief.md` decision 23, supersedes decision 18).
+4. **Widget placement confirmed:** the LeadConnector widget renders embedded
+   at the bottom-centre of the page, not a corner bubble. Copy now matches
+   that. Rebranding it to a collapsed bottom-right bubble in the amber/carbon
+   palette (review item 1.3) is a GoHighLevel settings change Brandon makes;
+   if he does it, revert the one line in `Inquire.astro` and re-shoot
+   `widget-prechat.png`.
+
+**Done this session:**
+
+*Copy (no logic or layout changes):*
+
+- `privacy.astro` / `terms.astro` (**review 0.1 + 0.2**): removed the pre-launch
+  "go live" lines and the phantom mailing-list / unsubscribe-link / email-capture
+  references, per the playbook §4 reconciliation rule. The A2P-reviewed SMS
+  blocks were not touched; STOP + HELP still appear in both required places.
+- `Packages.astro` (**review 2.1**): "Most chosen" → "Recommended" (no clients
+  yet — the old flag was an unsupportable claim).
+- `packages.ts`: `Champion's Legacy` (apostrophe), summary aligned to the
+  session-based inclusions, "five composites **in total**" removes the 5-vs-8
+  ambiguity against Future Legend's three.
+- `Hero.astro` / `Gallery.astro`: tightened the lead and gallery intro, and
+  "one evening" → "one session" (it contradicted "the session runs as long as
+  it needs to").
+- `Inquire.astro`: "chat button in the corner" → "message form at the bottom
+  of this page"; "pricing" references softened now that prices are on the page.
+
+*Assets + config:*
+
+- **Pricing (review 2.2, decision 23):** `price` field on each tier, shown as
+  "From $399 / $599 / $849". Intro copy and the per-tier CTA ("Request a
+  session") updated; `priceRange` in the LocalBusiness structured data set to
+  `$399–$849`.
+- **Favicon (review 0.3):** `public/favicon.svg` replaced with the "BG"
+  condensed monogram reserved in `brand.md`; warm near-black on a light tab,
+  bone on a dark tab. The stale `favicon.ico` and its `<link>` were removed —
+  the SVG covers every current browser and Googlebot.
+- **`og:image` (review 4.1):** `public/og-default.png` (1200×630) — an interim
+  type-only card on the warm-black ground, no photograph. `og:image` +
+  dimensions + alt, `og:locale`, and `twitter:image` wired in `Base.astro`.
+  Swap the PNG for a real hero-frame export in the photo session.
+
+**Still open for Brandon (decisions / asks, not defects — from `v1-review.md`):**
+
+- **4.2:** no `robots.txt` / `sitemap.xml` — mechanical, `@astrojs/sitemap` plus
+  a four-line file. Can be done any time; not a blocker.
+- **1.3:** rebrand the LeadConnector widget in GoHighLevel (amber/carbon theme,
+  "Tell me about your athlete" heading, collapsed bottom-right bubble). GHL
+  settings only — safe per playbook §5. If done, revert the one `Inquire.astro`
+  line and re-shoot `widget-prechat.png`.
+- **2.3–2.5:** re-cutting the three tiers so they ladder on *kind* not
+  *quantity*, and moving the single amber button to Packages.
+- **1.5:** no social proof anywhere — ask the Shepherd family for two sentences
+  alongside the likeness-release request.
+
+**Awaiting Brandon:** the second Cloudflare Pages project (`rebrand` branch)
+for a shareable preview URL — walkthrough provided this session — then the
+photo follow-up session, then the open decisions above, then domain cutover.
+Nothing is committed yet.
 
 **Done so far:**
 
