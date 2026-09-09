@@ -1,0 +1,126 @@
+---
+import { Picture } from 'astro:assets';
+import { portfolio } from '../data/portfolio';
+---
+
+<section class="section" id="work">
+	<div class="shell">
+		<header class="gallery__head">
+			<h2 class="t-section">Selected work</h2>
+			<p class="t-body gallery__intro">
+				One athlete, one evening, one body of work. Every frame below was shot, isolated,
+				composited and graded for this athlete alone.
+			</p>
+		</header>
+
+		<div class="gallery">
+			{
+				portfolio.map((item, i) => (
+					<figure class:list={['gallery__item', `gallery__item--${item.span}`]}>
+						<div class="gallery__frame">
+							<Picture
+								src={item.image}
+								alt={item.alt}
+								formats={['avif', 'webp']}
+								widths={item.span === 'feature' ? [640, 900, 1200, 1600] : [400, 600, 800]}
+								sizes={
+									item.span === 'feature'
+										? '(min-width: 64rem) 1100px, 92vw'
+										: '(min-width: 64rem) 620px, 92vw'
+								}
+								loading={i === 0 ? 'eager' : 'lazy'}
+								decoding="async"
+								class="gallery__image"
+							/>
+						</div>
+						<figcaption class="t-caption gallery__caption">
+							<span class="gallery__athlete">{item.athlete}</span>
+							<span aria-hidden="true">·</span>
+							<span>{item.role}</span>
+							<span aria-hidden="true">·</span>
+							<span>{item.year}</span>
+						</figcaption>
+					</figure>
+				))
+			}
+		</div>
+	</div>
+</section>
+
+<style>
+	.gallery__head {
+		display: grid;
+		gap: 1.25rem;
+		margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+	}
+
+	.gallery__intro {
+		color: var(--ash);
+	}
+
+	.gallery {
+		display: grid;
+		gap: clamp(1rem, 0.5rem + 2vw, 2rem);
+	}
+
+	/*
+	 * Portrait sources at full container width produce absurdly tall items, so
+	 * every tile gets a fixed box and the image covers it. Feature tiles are
+	 * capped by viewport height instead, so a tall composite is never taller
+	 * than the screen.
+	 */
+	.gallery__frame {
+		aspect-ratio: 4 / 5;
+		overflow: hidden;
+	}
+
+	.gallery__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+
+	.gallery__item--feature .gallery__frame {
+		aspect-ratio: auto;
+		display: flex;
+		justify-content: center;
+	}
+
+	.gallery__item--feature .gallery__image {
+		width: auto;
+		max-width: 100%;
+		max-height: min(78vh, 46rem);
+		height: auto;
+		object-fit: contain;
+	}
+
+	.gallery__caption {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 0.875rem;
+	}
+
+	.gallery__athlete {
+		color: var(--bone);
+	}
+
+	@media (min-width: 48rem) {
+		.gallery {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.gallery__item--feature {
+			grid-column: 1 / -1;
+		}
+	}
+
+	@media (min-width: 64rem) {
+		.gallery__head {
+			grid-template-columns: auto minmax(0, 46ch);
+			align-items: end;
+			justify-content: space-between;
+			gap: 3rem;
+		}
+	}
+</style>

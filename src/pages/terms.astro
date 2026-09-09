@@ -1,0 +1,89 @@
+---
+import Legal from '../layouts/Legal.astro';
+import { site } from '../data/site';
+
+/*
+ * Ported from the previous terms.html. Substance unchanged except "Our
+ * Services", which described a pre-launch site offering game day coverage and
+ * team packages. Both statements are now false and the first one directly
+ * contradicts the A2P 10DLC resubmission, so it has been updated to describe
+ * the service actually offered.
+ *
+ * The "Text Messaging (SMS)" section is A2P-reviewed wording — do not reword it
+ * without reading reference/a2p-10dlc-playbook.md first.
+ */
+---
+
+<Legal
+	title={`Terms of Service | ${site.name}`}
+	heading="Terms of Service"
+	updated="September 2026"
+>
+	<p>
+		These Terms of Service ("Terms") govern your use of this website, operated by Brandon
+		Garner Photography ("we," "us," or "our"). By using this site or contacting us, you agree
+		to these Terms.
+	</p>
+
+	<h2>Our Services</h2>
+	<p>
+		Brandon Garner Photography provides custom sports portrait photography for individual
+		athletes, including one-on-one portrait sessions, art-directed composite portraits, and
+		archival prints. Sessions are booked by inquiry and quoted individually; pricing and
+		availability are confirmed in writing before any session is scheduled.
+	</p>
+
+	<h2>Contacting Us</h2>
+	<p>
+		If you reach out through the chat feature on this site, you agree that we may use the
+		information you provide to respond to your inquiry and, if you ask us to, to let you know
+		when our booking and services go live. You may ask us to stop contacting you at any time.
+	</p>
+
+	<h2>Text Messaging (SMS)</h2>
+	<p>
+		If you choose to communicate with us via text message or provide your phone number and opt
+		in to SMS communications, you agree to receive messages related to your inquiry,
+		scheduling, and updates about our services. Message and data rates may apply. Message
+		frequency varies. Reply STOP at any time to opt out, or HELP for assistance. Consent to
+		receive text messages is not a condition of purchasing any services.
+	</p>
+
+	<h2>Acceptable Use</h2>
+	<p>
+		You agree not to misuse this website, including attempting to access it using automated
+		means, interfering with its normal operation, or submitting false or misleading information
+		through our forms.
+	</p>
+
+	<h2>Intellectual Property</h2>
+	<p>
+		All photographs, text, graphics, and other content on this site are the property of Brandon
+		Garner Photography unless otherwise noted, and may not be used or reproduced without
+		permission.
+	</p>
+
+	<h2>No Warranty</h2>
+	<p>
+		This website and its content are provided "as is" without warranties of any kind, express
+		or implied.
+	</p>
+
+	<h2>Limitation of Liability</h2>
+	<p>
+		To the fullest extent permitted by law, Brandon Garner Photography shall not be liable for
+		any indirect, incidental, or consequential damages arising from your use of this website.
+	</p>
+
+	<h2>Changes to These Terms</h2>
+	<p>
+		We may update these Terms from time to time. Continued use of this site after changes are
+		posted constitutes acceptance of the revised Terms.
+	</p>
+
+	<h2>Contact Us</h2>
+	<p>
+		Questions about these Terms can be directed to <a href={site.emailHref}>{site.email}</a>{' '}
+		or <a href={site.phoneHref}>{site.phone}</a>. Our mailing address is {site.address}.
+	</p>
+</Legal>

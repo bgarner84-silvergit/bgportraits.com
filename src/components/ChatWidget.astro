@@ -1,0 +1,21 @@
+---
+import { site } from '../data/site';
+
+/*
+ * LeadConnector (GoHighLevel) chat widget.
+ *
+ * This is the contact path the A2P 10DLC campaign was submitted against. The
+ * widget carries the approved SMS-consent wording with both consent checkboxes
+ * unchecked by default, and docs/widget-prechat.png is the screenshot artifact
+ * proving it. Do not replace it, edit its copy, or pre-check anything.
+ *
+ * `is:inline` keeps the tag exactly as the vendor supplies it — Astro must not
+ * bundle or defer a third-party loader that expects to run as-is.
+ */
+---
+
+<script
+	is:inline
+	src="https://widgets.leadconnectorhq.com/loader.js"
+	data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+	data-widget-id={site.chatWidgetId}></script>

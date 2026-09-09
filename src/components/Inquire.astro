@@ -1,0 +1,131 @@
+---
+import { site } from '../data/site';
+
+/*
+ * The inquiry path is the LeadConnector chat widget rendered by ChatWidget.astro
+ * (loaded site-wide in the layout). This section explains what to expect and
+ * points at it; it deliberately does not duplicate the form, because that
+ * widget is the exact contact path the A2P 10DLC campaign was approved against.
+ */
+---
+
+<section class="section inquire" id="inquire">
+	<div class="shell inquire__inner">
+		<div class="inquire__type">
+			<h2 class="t-section">Request a session</h2>
+			<p class="t-lead inquire__lead">
+				Tell me about your athlete — sport, season, and what you want on the wall when it is
+				finished. I will come back with availability and pricing.
+			</p>
+			<p class="t-body inquire__note">
+				Use the chat button in the corner of the screen, or reach me directly.
+			</p>
+
+			<div class="inquire__direct">
+				<a class="inquire__contact link-underline" href={site.phoneHref}>{site.phone}</a>
+				<a class="inquire__contact link-underline" href={site.emailHref}>{site.email}</a>
+			</div>
+		</div>
+
+		<aside class="inquire__panel">
+			<h3 class="t-label inquire__panel-title">What happens next</h3>
+			<ol class="inquire__steps">
+				<li>You send a few details about your athlete.</li>
+				<li>We talk through the piece — pose, scene, where it will hang.</li>
+				<li>We book the session and I send pricing in writing.</li>
+			</ol>
+			<p class="t-caption inquire__consent">
+				Messaging is optional and you can opt out at any time. See our{' '}
+				<a class="link-underline" href="/privacy">Privacy Policy</a>{' '}for how we handle
+				your information.
+			</p>
+		</aside>
+	</div>
+</section>
+
+<style>
+	.inquire {
+		border-top: 1px solid var(--graphite);
+	}
+
+	.inquire__inner {
+		display: grid;
+		gap: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+		align-items: start;
+	}
+
+	.inquire__lead {
+		margin-top: 1.5rem;
+		color: var(--ash);
+	}
+
+	.inquire__note {
+		margin-top: 1.5rem;
+	}
+
+	.inquire__direct {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1.5rem;
+		margin-top: 1.25rem;
+	}
+
+	/* Left in sentence case — an uppercased email address reads as shouting. */
+	.inquire__contact {
+		font-family: var(--font-display);
+		font-stretch: var(--width-condensed);
+		font-weight: 700;
+		font-size: var(--size-subhead);
+		letter-spacing: -0.01em;
+	}
+
+	.inquire__panel {
+		background: var(--carbon);
+		border: 1px solid var(--graphite);
+		padding: clamp(1.75rem, 1rem + 2vw, 2.5rem);
+	}
+
+	.inquire__panel-title {
+		color: var(--amber);
+	}
+
+	.inquire__steps {
+		margin: 1.5rem 0 0;
+		padding: 0;
+		list-style: none;
+		counter-reset: step;
+		display: grid;
+		gap: 1rem;
+	}
+
+	.inquire__steps li {
+		counter-increment: step;
+		position: relative;
+		padding-inline-start: 2rem;
+		color: var(--ash);
+		line-height: 1.5;
+	}
+
+	.inquire__steps li::before {
+		content: counter(step, decimal-leading-zero);
+		position: absolute;
+		inset-inline-start: 0;
+		font-size: var(--size-label);
+		font-weight: 600;
+		letter-spacing: 0.12em;
+		color: var(--bone);
+		line-height: 1.9;
+	}
+
+	.inquire__consent {
+		margin-top: 1.75rem;
+		padding-top: 1.25rem;
+		border-top: 1px solid var(--graphite);
+	}
+
+	@media (min-width: 64rem) {
+		.inquire__inner {
+			grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+		}
+	}
+</style>

@@ -1,0 +1,51 @@
+---
+import '@fontsource-variable/saira/wdth.css';
+import '../styles/tokens.css';
+import '../styles/global.css';
+
+import { site } from '../data/site';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import ChatWidget from '../components/ChatWidget.astro';
+
+interface Props {
+	title: string;
+	description?: string;
+	/** Legal pages use a plain header with no anchor nav. */
+	minimalHeader?: boolean;
+}
+
+const { title, description = site.description, minimalHeader = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? site.url).href;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonical} />
+
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" sizes="32x32" />
+		<meta name="theme-color" content="#000000" />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:site_name" content={site.name} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonical} />
+		<meta name="twitter:card" content="summary_large_image" />
+	</head>
+	<body>
+		<a class="skip-link" href="#main">Skip to content</a>
+		<SiteHeader minimal={minimalHeader} />
+		<main id="main">
+			<slot />
+		</main>
+		<SiteFooter />
+		<ChatWidget />
+	</body>
+</html>

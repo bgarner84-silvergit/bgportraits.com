@@ -139,8 +139,39 @@ These refine or supersede the list above.
     museum site. A dark base still applies; the energy comes from type and
     composition, not from a busy background.
 
+## Decisions locked 2026-09-08 (session 5 — the A2P build)
+
+16. **What ships for the A2P resubmission.** "Presentable to prospects" — clean,
+    on-brand, reads as a real working business. Not the full high-end build.
+    Chosen over "minimum to pass" because the reviewer judges whether the whole
+    site looks like a real operating business, and that is what denied it once.
+17. **Site structure.** One scrolling page, but content lives in typed data
+    files (`src/data/*.ts`) and components, so the later multi-page build reuses
+    it rather than being rewritten.
+18. **Pricing.** Named packages with what is included, no public prices; every
+    tier routes to "Request pricing". Signals a real business without
+    committing to numbers. Tiers: **Future Star**, **Future Legend**,
+    **Champions Legacy** (inclusions drafted in `src/data/packages.ts`, Brandon
+    owns final wording).
+19. **Contact.** LeadConnector chat widget only. It carries the SMS-consent
+    wording that passed review and the `widget-prechat.png` artifact; a second
+    native form would put that at risk for no A2P benefit. Native form is a
+    fast-follow.
+20. **Go-live.** Deploy to a Cloudflare preview URL, Brandon reviews, then cut
+    the domain over. A2P needs bgportraits.com itself serving the new site
+    before resubmitting.
+21. **Portfolio is football only for v1.** The two Savanah soccer composites are
+    held back. Two athletes in two sports would broaden the shopfront toward
+    what the volume team shooters do and undercut the one-on-one positioning in
+    decisions 1–3 and 11. Revisit when the portfolio goes multi-page.
+22. **No CSS framework.** Tailwind would be a second rulebook fighting the
+    `brand.md` type and colour system. CSS is written directly against the
+    brand tokens.
+
 ## Status
 
 Repo prepared: `rebrand` branch created, Astro scaffolded at repo root, builds
 clean (see `repo-structure.md`). Visual direction locked (decisions 11–15).
-Next session starts at Phase 1 — brand mini-system.
+Phase 1 (brand) and Phase 3 (site build) are done — the v1 page is built and
+hitting the performance budget (see `project-plan.md`). Remaining before the
+A2P resubmission: Cloudflare preview project, Brandon's review, domain cutover.

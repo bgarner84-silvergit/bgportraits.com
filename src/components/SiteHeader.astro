@@ -1,0 +1,87 @@
+---
+import { nav } from '../data/site';
+import Wordmark from './Wordmark.astro';
+
+interface Props {
+	minimal?: boolean;
+}
+
+const { minimal = false } = Astro.props;
+---
+
+<header class="header">
+	<div class="shell header__inner">
+		<Wordmark />
+
+		{
+			!minimal && (
+				<nav class="header__nav" aria-label="Sections">
+					{nav.map((item) => (
+						<a class="header__link t-label link-underline" href={item.href}>
+							{item.label}
+						</a>
+					))}
+				</nav>
+			)
+		}
+
+		<a class="header__cta t-label" href="#inquire">Request a session</a>
+	</div>
+</header>
+
+<style>
+	.header {
+		position: sticky;
+		top: 0;
+		z-index: 20;
+		background: color-mix(in srgb, var(--black) 82%, transparent);
+		backdrop-filter: blur(14px);
+		border-bottom: 1px solid var(--graphite);
+	}
+
+	.header__inner {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+		height: 4.5rem;
+	}
+
+	.header__nav {
+		display: none;
+		gap: 2rem;
+		margin-inline-start: auto;
+	}
+
+	.header__link {
+		color: var(--ash);
+	}
+
+	.header__cta {
+		margin-inline-start: auto;
+		color: var(--bone);
+		border-bottom: 1px solid var(--amber);
+		padding-bottom: 2px;
+		transition: color var(--dur) var(--ease);
+	}
+
+	.header__cta:hover {
+		color: var(--amber);
+	}
+
+	@media (min-width: 60rem) {
+		.header__nav {
+			display: flex;
+		}
+
+		.header__cta {
+			margin-inline-start: 0;
+		}
+	}
+
+	/* The CTA alone is enough on a narrow screen; the page is one scroll. */
+	@media (max-width: 26rem) {
+		.header__cta {
+			font-size: 0.6875rem;
+		}
+	}
+</style>

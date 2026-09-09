@@ -1,0 +1,102 @@
+/*
+ * Brand tokens — the single source of truth is docs/brand.md.
+ * Change a value there first, then here.
+ */
+
+:root {
+	/* Colour — six values, each with one job */
+	--black: #000000; /* canvas; hero and portfolio backgrounds */
+	--carbon: #14110f; /* secondary surfaces — footer, panels */
+	--graphite: #2c2825; /* 1px dividers and borders */
+	--ash: #8c8681; /* captions, metadata, muted text */
+	--bone: #f2eee7; /* primary text, wordmark */
+	--amber: #f5852b; /* interaction states; the one primary button */
+
+	/* Type — one superfamily at two widths */
+	--font-display: 'Saira Variable', 'Saira Condensed', 'Arial Narrow', system-ui, sans-serif;
+	--font-text: 'Saira Variable', 'Saira', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+	/* Width axis: the display cut is condensed, text sits at normal width */
+	--width-condensed: 75%;
+	--width-normal: 100%;
+
+	/* Scale — perfect fourth on desktop, tightened on mobile */
+	--size-hero: clamp(2.5rem, 1.2rem + 5.8vw, 4.5rem); /* 40 → 72 */
+	--size-section: clamp(1.875rem, 1.4rem + 2.1vw, 2.5rem); /* 30 → 40 */
+	--size-subhead: clamp(1.3125rem, 1.2rem + 0.5vw, 1.5rem); /* 21 → 24 */
+	--size-lead: clamp(1.1875rem, 1.15rem + 0.16vw, 1.25rem); /* 19 → 20 */
+	--size-body: 1.0625rem; /* 17 */
+	--size-caption: 0.875rem; /* 14 */
+	--size-label: 0.75rem; /* 12 */
+
+	/* Rhythm */
+	--measure: 68ch; /* body copy line length cap */
+	--gutter: clamp(1.25rem, 0.9rem + 1.6vw, 2.5rem);
+	--section-y: clamp(4.5rem, 3rem + 7vw, 9rem);
+	--shell: 1360px;
+
+	/* Motion */
+	--ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+	--dur: 320ms;
+}
+
+/*
+ * Type roles. One change per step of hierarchy — never stack size, weight,
+ * colour and case changes on the same jump.
+ */
+
+.t-hero {
+	font-family: var(--font-display);
+	font-stretch: var(--width-condensed);
+	font-weight: 800;
+	font-size: var(--size-hero);
+	line-height: 1.02;
+	letter-spacing: -0.015em;
+	text-transform: uppercase;
+}
+
+.t-section {
+	font-family: var(--font-display);
+	font-stretch: var(--width-condensed);
+	font-weight: 700;
+	font-size: var(--size-section);
+	line-height: 1.1;
+	letter-spacing: -0.01em;
+	text-transform: uppercase;
+}
+
+.t-subhead {
+	font-family: var(--font-text);
+	font-stretch: var(--width-normal);
+	font-weight: 600;
+	font-size: var(--size-subhead);
+	line-height: 1.25;
+}
+
+.t-lead {
+	font-size: var(--size-lead);
+	line-height: 1.5;
+	max-width: var(--measure);
+}
+
+.t-body {
+	font-size: var(--size-body);
+	line-height: 1.6;
+	max-width: var(--measure);
+}
+
+.t-caption {
+	font-size: var(--size-caption);
+	font-weight: 500;
+	line-height: 1.4;
+	color: var(--ash);
+}
+
+/* Uppercase-plus-tracking is for navigational furniture only. */
+.t-label {
+	font-size: var(--size-label);
+	font-weight: 600;
+	line-height: 1.3;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+}

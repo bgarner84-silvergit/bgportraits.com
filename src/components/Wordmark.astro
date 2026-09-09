@@ -1,0 +1,43 @@
+---
+import { site } from '../data/site';
+
+interface Props {
+	/** Renders as a link back to the homepage. Off inside the h1 on the hero. */
+	link?: boolean;
+	as?: 'span' | 'div';
+}
+
+const { link = true, as: Tag = 'span' } = Astro.props;
+---
+
+{
+	link ? (
+		<a class="wordmark" href="/" aria-label={`${site.name} — home`}>
+			{site.shortName}
+		</a>
+	) : (
+		<Tag class="wordmark">{site.shortName}</Tag>
+	)
+}
+
+<style>
+	/*
+	 * Deliberately not the condensed display cut — condensed titling on a
+	 * personal name reads as movie-poster lettering rather than a byline.
+	 */
+	.wordmark {
+		display: inline-block;
+		font-family: var(--font-text);
+		font-stretch: var(--width-normal);
+		font-weight: 600;
+		font-size: 1.125rem;
+		letter-spacing: 0.02em;
+		color: var(--bone);
+		white-space: nowrap;
+		transition: color var(--dur) var(--ease);
+	}
+
+	a.wordmark:hover {
+		color: var(--amber);
+	}
+</style>

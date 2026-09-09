@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets';
+import { site } from '../data/site';
+import portrait from '../assets/portfolio/03-jack-portrait.jpg';
+import signature from '../assets/signature.png';
+
+/*
+ * Placeholder bio. Brandon replaces this copy — and ideally the image, with a
+ * photograph of himself — in Phase 4 (docs/project-plan.md).
+ */
+---
+
+<section class="section about" id="about">
+	<div class="shell">
+		<div class="about__grid">
+			<figure class="about__figure">
+				<Image
+					src={portrait}
+					alt="A finished hero portrait from a recent session, the athlete lit against a dark ground."
+					widths={[420, 640, 900]}
+					sizes="(min-width: 64rem) 520px, 92vw"
+					loading="lazy"
+					decoding="async"
+					class="about__image"
+				/>
+			</figure>
+
+			<div class="about__body">
+				<h2 class="t-section">About</h2>
+
+				<p class="t-lead about__lead">
+					I am Brandon Garner. I photograph one athlete at a time, out of {
+						`${site.locality}, ${site.region}`
+					}.
+				</p>
+
+				<p class="t-body about__para">
+					I started doing this the way most people do — shooting games, handing over a
+					gallery, moving on. The pictures were fine. None of them ended up on a wall.
+				</p>
+
+				<p class="t-body about__para">
+					So I changed the job. Now every athlete gets a session built around them and one
+					finished piece that took real hours to make: cut out by hand, composited onto a
+					scene we planned together, graded and retouched until it holds up printed large.
+					It is slower and it does not scale, and that is exactly why it looks the way it
+					does.
+				</p>
+
+				<p class="t-body about__para">
+					If that is the kind of portrait you want for your athlete, get in touch and tell
+					me about them.
+				</p>
+
+				<Image
+					src={signature}
+					alt="Brandon Garner"
+					widths={[220, 440]}
+					sizes="220px"
+					loading="lazy"
+					decoding="async"
+					class="about__signature"
+				/>
+			</div>
+		</div>
+	</div>
+</section>
+
+<style>
+	.about {
+		border-top: 1px solid var(--graphite);
+	}
+
+	.about__grid {
+		display: grid;
+		gap: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+		align-items: start;
+	}
+
+	.about__image {
+		width: 100%;
+		height: auto;
+	}
+
+	.about__lead {
+		margin-top: 1.5rem;
+		color: var(--bone);
+	}
+
+	.about__para {
+		margin-top: 1.25rem;
+		color: var(--ash);
+	}
+
+	.about__signature {
+		width: 13.75rem;
+		height: auto;
+		margin-top: 2.25rem;
+		opacity: 0.9;
+	}
+
+	@media (min-width: 64rem) {
+		.about__grid {
+			grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+		}
+	}
+</style>

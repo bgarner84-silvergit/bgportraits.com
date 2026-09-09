@@ -23,3 +23,15 @@ print-masters/
 *.psd
 *.tif
 *.tiff
+
+# Culling scratch — the 1200px proxies Brandon exported for the cull plus the
+# evaluation cutouts derived from them. Throwaway by design (docs/project-plan.md
+# Phase 2); the originals live in Lightroom and the cutouts are regenerable. The
+# decision record that came out of it is kept: docs/cull-shortlist.md and the
+# contact sheets in docs/cull-review/.
+design/cull/
+
+# Byte-identical copies of composites already tracked at design/ root. Held back
+# from v1 anyway (project-brief.md decision 21 — football only).
+design/composites/DSC_9918-Edit.jpg
+design/composites/Flaming Soccer Ball_Sav.jpg

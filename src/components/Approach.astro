@@ -1,0 +1,98 @@
+---
+/*
+ * Placeholder copy. Final positioning copy is Phase 4 (docs/project-plan.md).
+ */
+
+const steps = [
+	{
+		n: '01',
+		title: 'We plan the piece first',
+		body: 'Before the camera comes out we agree on what the finished portrait is — the pose, the light, the scene it will live in. Your athlete is not working through a shot list somebody else wrote.',
+	},
+	{
+		n: '02',
+		title: 'One athlete, one session',
+		body: 'No line of teammates waiting behind them. The session runs as long as it needs to, which is what makes the difference between a photo and a portrait.',
+	},
+	{
+		n: '03',
+		title: 'Built by hand, frame by frame',
+		body: 'Every hero image is cut out, composited onto an art-directed background, graded and retouched individually. That is hours per image, and it is the whole point.',
+	},
+];
+---
+
+<section class="section approach" id="approach">
+	<div class="shell">
+		<div class="approach__grid">
+			<div class="approach__intro">
+				<h2 class="t-section">The difference is the hours</h2>
+				<p class="t-lead approach__lead">
+					The high-volume team shooters get through a roster in an afternoon. That is a
+					different job. This one is built around a single athlete and finished like a piece
+					of work you would hang.
+				</p>
+			</div>
+
+			<ol class="approach__steps">
+				{
+					steps.map((step) => (
+						<li class="approach__step">
+							<span class="t-label approach__n">{step.n}</span>
+							<h3 class="t-subhead">{step.title}</h3>
+							<p class="t-body approach__body">{step.body}</p>
+						</li>
+					))
+				}
+			</ol>
+		</div>
+	</div>
+</section>
+
+<style>
+	.approach {
+		border-top: 1px solid var(--graphite);
+	}
+
+	.approach__grid {
+		display: grid;
+		gap: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+	}
+
+	.approach__lead {
+		margin-top: 1.5rem;
+		color: var(--ash);
+	}
+
+	.approach__steps {
+		list-style: none;
+		padding: 0;
+		display: grid;
+		gap: 2.5rem;
+	}
+
+	.approach__step {
+		display: grid;
+		gap: 0.75rem;
+		padding-top: 1.5rem;
+		border-top: 1px solid var(--graphite);
+	}
+
+	.approach__n {
+		color: var(--amber);
+	}
+
+	.approach__body {
+		color: var(--ash);
+	}
+
+	@media (min-width: 64rem) {
+		.approach__grid {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+		}
+
+		.approach__steps {
+			gap: 3rem;
+		}
+	}
+</style>

@@ -1,0 +1,140 @@
+---
+import { Image } from 'astro:assets';
+import { signatureWork } from '../data/portfolio';
+import { site } from '../data/site';
+
+/*
+ * The signature piece is a light-ground poster, so it is presented as a print
+ * hanging on the dark wall rather than bled to the edges. That resolves the
+ * value clash with the warm-black canvas and, more usefully, shows the thing
+ * the client actually buys.
+ */
+---
+
+<section class="hero">
+	<div class="shell hero__inner">
+		<div class="hero__type">
+			<p class="t-label hero__eyebrow">{site.locality}, {site.region} &middot; Custom athlete portraits</p>
+
+			<h1 class="t-hero hero__headline">
+				One athlete.<br />
+				One portrait that<br />
+				owns the wall.
+			</h1>
+
+			<p class="t-lead hero__lead">
+				Every piece is built for one athlete — art-directed, composited and finished by hand.
+				Not a preset run across a roster.
+			</p>
+
+			<div class="hero__actions">
+				<a class="btn btn--primary" href="#inquire">Request a session</a>
+				<a class="btn btn--ghost" href="#work">See the work</a>
+			</div>
+		</div>
+
+		<figure class="hero__figure">
+			<div class="hero__frame">
+				<Image
+					src={signatureWork.image}
+					alt={signatureWork.alt}
+					widths={[480, 720, 960, 1200]}
+					sizes="(min-width: 64rem) 40vw, 88vw"
+					loading="eager"
+					fetchpriority="high"
+					class="hero__image"
+				/>
+			</div>
+			<figcaption class="t-caption hero__caption">
+				<span class="hero__athlete">{signatureWork.athlete}</span>
+				<span aria-hidden="true">·</span>
+				<span>{signatureWork.role}</span>
+				<span aria-hidden="true">·</span>
+				<span>{signatureWork.year}</span>
+			</figcaption>
+		</figure>
+	</div>
+</section>
+
+<style>
+	.hero {
+		position: relative;
+		padding-block: clamp(3.5rem, 2rem + 7vw, 7rem) var(--section-y);
+		overflow: hidden;
+	}
+
+	/* The one warm light source, sampled from the stadium light in the work. */
+	.hero::before {
+		content: '';
+		position: absolute;
+		inset-block-start: -30%;
+		inset-inline-end: -10%;
+		width: min(60rem, 90vw);
+		aspect-ratio: 1;
+		background: radial-gradient(
+			circle,
+			color-mix(in srgb, var(--amber) 14%, transparent) 0%,
+			transparent 62%
+		);
+		pointer-events: none;
+	}
+
+	.hero__inner {
+		position: relative;
+		display: grid;
+		gap: clamp(2.5rem, 1rem + 6vw, 4.5rem);
+		align-items: center;
+	}
+
+	.hero__eyebrow {
+		color: var(--ash);
+		margin-bottom: 1.5rem;
+	}
+
+	.hero__headline {
+		text-wrap: balance;
+	}
+
+	.hero__lead {
+		margin-top: 1.75rem;
+		color: var(--ash);
+		max-width: 42ch;
+	}
+
+	.hero__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.875rem;
+		margin-top: 2.5rem;
+	}
+
+	/* A hairline frame — the print on the wall, no shadow, no elevation. */
+	.hero__frame {
+		border: 1px solid var(--graphite);
+		padding: clamp(0.5rem, 0.3rem + 0.8vw, 0.875rem);
+	}
+
+	.hero__image {
+		width: 100%;
+		height: auto;
+		max-height: 72vh;
+		object-fit: contain;
+	}
+
+	.hero__caption {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5rem;
+		margin-top: 1rem;
+	}
+
+	.hero__athlete {
+		color: var(--bone);
+	}
+
+	@media (min-width: 64rem) {
+		.hero__inner {
+			grid-template-columns: 1fr minmax(0, 0.85fr);
+		}
+	}
+</style>

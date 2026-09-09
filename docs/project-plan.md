@@ -13,10 +13,27 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-07, end of session 2)
+## Status — start here (updated 2026-09-07, session 3)
 
 **Branch:** `rebrand`, pushed to GitHub. `main` still serves the live
 coming-soon site, untouched.
+
+**Session 3:** Brandon exported 87 frames into `design/cull/`. Claude ranked
+them and proposed a 14-image hero set with 12 alternates.
+
+**Session 4:** Ran the cutout pass on the 14 (transparent PNGs in
+`design/cull/nobg/`) and re-scored each into a portfolio / graphic / both
+role — see the "Cutout pass + re-score" section of `docs/cull-shortlist.md`
+and the review sheets in `design/cull/`. One swap recommended (`8926` →
+`8902`); the set is entirely front-facing (no back-of-jersey shot).
+
+**Session 5 — Phase 3 site built.** The v1 single-page site is built and
+passing. Decisions taken with Brandon this session are recorded in
+`project-brief.md` decisions 16–22. Detail below under Phase 3.
+
+**Awaiting Brandon:** review the preview build, then stand up the second
+Cloudflare Pages project so there is a shareable preview URL, then approve
+the domain cutover. Nothing is committed yet.
 
 **Done so far:**
 
@@ -30,18 +47,20 @@ coming-soon site, untouched.
   script. Export specs and naming in that folder's README.
 - Likeness-release plain template drafted: `docs/likeness-release.md`.
 
-**Next task: cull the photos (Phase 2, step 1).** Steps for Brandon:
+**Next task: lock the hero set (Phase 2, step 1 → 2).** The cull ranking is
+done — `docs/cull-shortlist.md` proposes 14 picks in gallery order plus 12
+alternates. Steps for Brandon:
 
-1. In Lightroom, select all ~80 frames from the shoot.
-2. Export them as small JPEGs — long edge 1200px, quality 60 is fine — into a
-   new folder `design/cull/` in this repo. (Or export one contact-sheet PDF and
-   drop it in `design/cull/` instead.)
-3. Start a session and tell Claude the frames are in `design/cull/`.
-4. Claude ranks them and proposes a hero set of 12–16; Brandon makes the final
-   calls.
-5. Brandon composites and grades the chosen frames in Photoshop (stadium light,
-   atmosphere, grade to the `brand.md` palette), then exports web masters into
-   `src/assets/portfolio/` per that folder's README and commits.
+1. Review `HERO-SET.jpg` / `ALTERNATES.jpg` / `sheet-1..3.jpg` (on the phone).
+2. Confirm or edit the 14 — swap from alternates, reorder, change the count
+   within 12–16.
+3. Decide the face question flagged in the shortlist: lean into visor-down for
+   v1, or schedule a short helmet-off reshoot.
+4. Composite and grade the locked set in Photoshop (isolate, drop onto
+   art-directed stadium backgrounds — vary background, crop, and scale across
+   the set — grade to the `brand.md` palette, retouch).
+5. Export web masters into `src/assets/portfolio/` per that folder's README
+   (`NN-jack-shot.jpg`, 2400px, JPEG q90, sRGB) and commit.
 
 `design/cull/` is throwaway — it can be deleted or git-ignored once the hero set
 is chosen.
@@ -135,6 +154,49 @@ the site *feel* is sport, not museum; energy from type, pacing, and motion.
 - **Performance budget:** Lighthouse performance ≥ 95, LCP < 2.5s, CLS < 0.1,
   first-view transfer < 1.5 MB. Verified before the phase closes.
 - **Working state:** full site on a Pages preview URL, hitting the budget.
+
+### Built 2026-09-08 (session 5)
+
+Single scrolling page: hero → Selected work → Approach → Packages → About →
+Request a session → footer. Legal pages at `/privacy` and `/terms`.
+
+- **Stack.** Astro 7 static at repo root. Hand-written CSS against the
+  `brand.md` tokens (`src/styles/tokens.css`, `global.css`) — no Tailwind, so
+  there is only one type/colour rulebook. Saira self-hosted via
+  `@fontsource-variable/saira` (`wdth.css` — one variable file carries both the
+  weight and width axes, so the condensed display cut and the normal-width text
+  cut come from the same file). No external font CDN.
+- **Content is data, not markup.** `src/data/site.ts` (NAP, widget id, nav),
+  `portfolio.ts` (gallery items + alt text + captions), `packages.ts` (tiers).
+  Reordering the gallery or renaming a tier is a data edit. The later
+  multi-page build reuses these directly.
+- **Images.** `astro:assets` `<Picture>` emits AVIF/WebP/JPEG at several widths
+  with correct `srcset` and explicit dimensions. Gallery tiles are fixed 4:5
+  boxes with `object-fit: cover`; feature tiles are capped by viewport height.
+  Without that, a portrait source at full container width renders ~1600px tall
+  and the page becomes unusable.
+- **Contact.** LeadConnector widget only, re-embedded verbatim via
+  `components/ChatWidget.astro` with `is:inline` so Astro does not bundle or
+  defer the vendor loader. Consent copy and both-unchecked behaviour untouched.
+
+**Measured (Lighthouse, desktop preset, production build):**
+
+| | Result | Budget |
+|---|---|---|
+| Performance | **100** | ≥ 95 |
+| LCP | **0.7 s** | < 2.5 s |
+| CLS | **0.005** | < 0.1 |
+| Total transfer | **839 KiB** | < 1.5 MB |
+| SEO | **100** | — |
+| Accessibility | 95 | — |
+| Best practices | 78 | — |
+
+Accessibility and best-practices are held down entirely by the LeadConnector
+widget — an invalid `aria-activedescendant` in its phone-input, its
+`font-display`-less Roboto from fonts.bunny.net, and its third-party cookies.
+Re-running with `*leadconnectorhq*` blocked scores **100 / 100 / 100 / 100**,
+so the site's own markup is clean. Fixing those means changing the widget,
+which is off-limits.
 
 ## Phase 4 — Copy, SEO, accessibility
 **~3 hrs. Claude-led, Brandon approves copy.**
