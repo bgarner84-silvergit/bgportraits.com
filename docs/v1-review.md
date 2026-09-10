@@ -376,10 +376,11 @@ Add a 1200×630 export — the strongest dark-ground frame, wordmark bottom-left
 and wire `og:image`, `og:image:width`, `og:image:height`, `og:image:alt` and
 `twitter:image`. Also add `og:locale`.
 
-### 4.2 No `robots.txt`, no `sitemap.xml` — MEDIUM / 15 min
+### 4.2 No `robots.txt`, no `sitemap.xml` — DONE (session 7)
 
-Listed under Phase 4 and still outstanding. `@astrojs/sitemap` plus a four-line
-`public/robots.txt` closes it.
+Closed. `@astrojs/sitemap` added to `astro.config.mjs`, `public/robots.txt`
+(allow-all + `Sitemap:` line), `<link rel="sitemap">` in `Base.astro`. Build
+emits `sitemap-index.xml` / `sitemap-0.xml` for `/`, `/privacy`, `/terms`.
 
 ### 4.3 Structured data is thinner than it needs to be — LOW / 20 min
 

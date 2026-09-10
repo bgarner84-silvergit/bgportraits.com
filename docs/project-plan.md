@@ -13,7 +13,18 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-09, session 6)
+## Status — start here (updated 2026-09-09, session 7)
+
+**Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed.** Added
+`@astrojs/sitemap` (`astro.config.mjs` `integrations`), `public/robots.txt`
+(allow-all + sitemap reference), and a `<link rel="sitemap">` in `Base.astro`.
+Build passes; `dist/` now emits `sitemap-index.xml` + `sitemap-0.xml` covering
+`/`, `/privacy`, `/terms`, and `robots.txt` points at the index. Nothing else
+touched. Remaining open items below are all Brandon-gated (photo retouch, GHL
+widget re-shoot, tier re-cut decisions, social-proof ask, Cloudflare preview
+project).
+
+## Status (session 6)
 
 **Branch:** `rebrand`, pushed to GitHub. `main` still serves the live
 coming-soon site, untouched.
@@ -91,8 +102,6 @@ session:
 
 **Still open for Brandon (decisions / asks, not defects — from `v1-review.md`):**
 
-- **4.2:** no `robots.txt` / `sitemap.xml` — mechanical, `@astrojs/sitemap` plus
-  a four-line file. Can be done any time; not a blocker.
 - **1.3 (widget) — mostly done, two things left):** re-shoot
   `docs/widget-prechat.png` from the rebranded widget for the A2P submission,
   and on the *deployed* site confirm the transactional checkbox actually gates
