@@ -74,9 +74,10 @@ campaign 30922 was the denial).
 Loose end: drop the fresh widget screenshot into `docs/widget-prechat.png` so
 the tracked artifact matches the live widget.
 
-**Still open (Brandon):** warn whoever is listed as the A2P brand contact that
-verification outreach is coming (playbook §1.2). Then wait out the ~2-day
-review.
+**Brand contact = Brandon himself**, so the playbook §1.2 "warn the contact"
+step is a no-op — he just needs to answer the verification outreach (email/phone
+via Twilio/carrier through GoHighLevel) promptly and confirm the business
+identity. Nothing else is blocking the ~2-day review.
 
 **Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
 Cloudflare preview project is live.** Added `@astrojs/sitemap`
