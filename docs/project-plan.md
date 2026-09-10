@@ -61,14 +61,22 @@ would make consent a condition of contact). `a2p-10dlc-playbook.md` §5 was
 corrected accordingly; memory
 `a2p-consent-checkbox-must-not-block-form-submission` saved.
 
-**Next — runbook Steps 4–6 (need Brandon):**
-- Claude re-shoots `docs/widget-prechat.png` from the live flow (pre-submit
-  screen: both checkboxes unchecked + full disclosure).
-- Warn whoever is listed as the A2P brand contact that verification outreach is
-  coming (playbook §1.2).
-- Resubmit the customer-care / transactional campaign in GoHighLevel — apex URL,
-  description stating the site is now a complete operating business (addressing
-  the 30922 denial), refreshed screenshot attached.
+**A2P campaign RESUBMITTED (session 8).** Brandon resubmitted the customer-care
+campaign in GoHighLevel against the live apex site. GHL carried the prior
+submission forward and did not re-prompt for the opt-in screenshot, so it went
+in with the pre-rebrand `widget-prechat.png` on file — the consent-relevant
+content (both checkboxes unchecked, disclosure text) is unchanged from that
+image, so the proof is still accurate; only the widget's cosmetic chrome
+changed. Brandon captured a fresh screenshot of the current widget to hold in
+case the reviewer asks. The A2P **Brand** remains Approved (it always was —
+campaign 30922 was the denial).
+
+Loose end: drop the fresh widget screenshot into `docs/widget-prechat.png` so
+the tracked artifact matches the live widget.
+
+**Still open (Brandon):** warn whoever is listed as the A2P brand contact that
+verification outreach is coming (playbook §1.2). Then wait out the ~2-day
+review.
 
 **Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
 Cloudflare preview project is live.** Added `@astrojs/sitemap`
