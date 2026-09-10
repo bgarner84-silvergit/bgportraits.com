@@ -15,14 +15,38 @@ Pages preview URL.
 
 ## Status — start here (updated 2026-09-09, session 7)
 
-**Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed.** Added
-`@astrojs/sitemap` (`astro.config.mjs` `integrations`), `public/robots.txt`
-(allow-all + sitemap reference), and a `<link rel="sitemap">` in `Base.astro`.
-Build passes; `dist/` now emits `sitemap-index.xml` + `sitemap-0.xml` covering
-`/`, `/privacy`, `/terms`, and `robots.txt` points at the index. Nothing else
-touched. Remaining open items below are all Brandon-gated (photo retouch, GHL
-widget re-shoot, tier re-cut decisions, social-proof ask, Cloudflare preview
-project).
+**Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
+Cloudflare preview project is live.** Added `@astrojs/sitemap`
+(`astro.config.mjs` `integrations`), `public/robots.txt` (allow-all + sitemap
+reference), and a `<link rel="sitemap">` in `Base.astro`. Build passes; `dist/`
+now emits `sitemap-index.xml` + `sitemap-0.xml` covering `/`, `/privacy`,
+`/terms`, and `robots.txt` points at the index. Committed + pushed as `05fec77`.
+
+The second Cloudflare Pages project — **`bgportraits-rebrand`**, production
+branch `rebrand`, Astro preset, `npm run build` → `dist`, env var
+`NODE_VERSION=22.12.0` — was stood up this session and its first build (commit
+`05fec77`) succeeded. Preview URL: **https://bgportraits-rebrand.pages.dev**.
+Verified live: homepage renders, `/robots.txt` and `/sitemap-index.xml` serve
+(both correctly reference the production `bgportraits.com` host, not the
+`.pages.dev` subdomain). Every push to `rebrand` now auto-deploys here. No
+custom domain attached — deliberate, per `cloudflare-preview-setup.md`; the
+domain moves at the Phase 5 cutover. Note: A2P will not accept a `*.pages.dev`
+URL, so the campaign resubmission still waits for the domain cutover.
+
+Also this session: **removed the image above the About section** (`About.astro`)
+— it was `03-jack-portrait`, the client's athlete, next to "I am Brandon Garner"
+(review 1.2). The section is now single-column text. The photo still appears
+once in the gallery, so the asset stays. Widget confirmed good on the preview
+page. Brandon approved a merge to `main` after this rebuild verifies.
+
+**Follow-up (Brandon):** add Brandon's own profile photo to the About section.
+`About.astro` has a comment marking where it goes; it previously sat in a
+two-column grid (`minmax(0, 0.8fr) minmax(0, 1fr)` at ≥64rem) if that layout is
+wanted back.
+
+Remaining open items below are all Brandon-gated: photo retouch, GHL widget
+re-shoot + live-site consent-gate check, tier re-cut decisions, social-proof
+ask, About-section profile photo.
 
 ## Status (session 6)
 
@@ -113,10 +137,9 @@ session:
 - **1.5:** no social proof anywhere — ask the Shepherd family for two sentences
   alongside the likeness-release request.
 
-**Awaiting Brandon:** the second Cloudflare Pages project (`rebrand` branch)
-for a shareable preview URL — walkthrough provided this session — then the
-photo follow-up session, then the open decisions above, then domain cutover.
-Nothing is committed yet.
+**Next:** the photo follow-up session, then the open decisions above, then the
+Phase 5 domain cutover. The preview URL
+(https://bgportraits-rebrand.pages.dev) is live for phone review.
 
 **Done so far:**
 
@@ -152,8 +175,6 @@ is chosen.
 
 - Get `docs/likeness-release.md` reviewed by a Texas attorney, then filled and
   signed. Needed before any shoot photo goes public.
-- Stand up the second Cloudflare Pages project on the `rebrand` branch for a
-  preview URL (see `repo-structure.md`). Claude can walk through it.
 
 ---
 
@@ -167,15 +188,16 @@ is chosen.
 - [x] Claude: `rebrand` branch created; Astro scaffolded at repo root, builds
   clean; `docs/` and `design/` established; `.gitignore` added. See
   `repo-structure.md`. *(2026-09-07, session 2)*
-- [ ] Claude: confirm Cloudflare Pages builds from the repo — stand up the
-  second Pages project pointed at the `rebrand` branch for a preview URL.
+- [x] Claude: second Cloudflare Pages project (`bgportraits-rebrand`) stood up
+  on the `rebrand` branch; first build green. Preview at
+  https://bgportraits-rebrand.pages.dev. *(2026-09-09, session 7)*
 - [x] Image staging + naming convention established: `src/assets/portfolio/`
   with a README (export specs + `NN-athlete-shot.jpg` naming). *(2026-09-07,
   session 2)*
 - [x] `privacy.html`, `terms.html`, `widget-prechat.png` preserved (legal pages
   still at repo root untouched; `widget-prechat.png` moved to `docs/`).
 - **Working state:** Astro starter builds locally; legal pages still reachable.
-  Cloudflare preview URL still outstanding.
+  Cloudflare preview live at https://bgportraits-rebrand.pages.dev.
 
 ## Phase 1 — Brand mini-system
 **~3 hrs. Collaborative.**

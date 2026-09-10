@@ -1,30 +1,18 @@
 ---
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
-import portrait from '../assets/portfolio/03-jack-portrait.jpg';
 import signature from '../assets/signature.png';
 
 /*
- * Placeholder bio. Brandon replaces this copy — and ideally the image, with a
- * photograph of himself — in Phase 4 (docs/project-plan.md).
+ * Placeholder bio. Brandon replaces this copy in Phase 4 (docs/project-plan.md).
+ * The section image was removed in session 7 — it showed the client's athlete,
+ * not Brandon. Follow-up item: add Brandon's own profile photo here.
  */
 ---
 
 <section class="section about" id="about">
 	<div class="shell">
 		<div class="about__grid">
-			<figure class="about__figure">
-				<Image
-					src={portrait}
-					alt="A finished hero portrait from a recent session, the athlete lit against a dark ground."
-					widths={[420, 640, 900]}
-					sizes="(min-width: 64rem) 520px, 92vw"
-					loading="lazy"
-					decoding="async"
-					class="about__image"
-				/>
-			</figure>
-
 			<div class="about__body">
 				<h2 class="t-section">About</h2>
 
@@ -71,15 +59,8 @@ import signature from '../assets/signature.png';
 		border-top: 1px solid var(--graphite);
 	}
 
-	.about__grid {
-		display: grid;
-		gap: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
-		align-items: start;
-	}
-
-	.about__image {
-		width: 100%;
-		height: auto;
+	.about__body {
+		max-width: 46rem;
 	}
 
 	.about__lead {
@@ -97,11 +78,5 @@ import signature from '../assets/signature.png';
 		height: auto;
 		margin-top: 2.25rem;
 		opacity: 0.9;
-	}
-
-	@media (min-width: 64rem) {
-		.about__grid {
-			grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
-		}
 	}
 </style>

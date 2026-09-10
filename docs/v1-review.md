@@ -110,7 +110,13 @@ Fix, in priority order:
    defect displayed at 1100px is a different kind of problem than the same defect
    at 620px.
 
-### 1.2 The About section shows the client's kid, not Brandon — CRITICAL / 30 min
+### 1.2 The About section shows the client's kid, not Brandon — PARTIALLY DONE (session 7)
+
+**Update (session 7):** the misleading image was removed — the About section is
+now single-column text with no photo, so nothing implies the athlete is the
+photographer, and the ten-image duplication is gone. Still open as a follow-up:
+add an actual portrait of Brandon (see `About.astro` comment). Original finding
+below.
 
 `About.astro` renders `03-jack-portrait` next to the heading "About" and the line
 "I am Brandon Garner." A parent scanning that will assume the teenage football

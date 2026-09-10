@@ -1,5 +1,11 @@
 # Cloudflare Pages — preview project setup
 
+> **DONE — session 7 (2026-09-09).** Project `bgportraits-rebrand` created,
+> production branch `rebrand`, Astro preset, `NODE_VERSION=22.12.0`. First build
+> (commit `05fec77`) green. Live at https://bgportraits-rebrand.pages.dev — every
+> push to `rebrand` auto-deploys. No custom domain, by design. The steps below
+> are kept for reference and for the Phase 5 cutover section at the end.
+
 **Goal:** a second Cloudflare Pages project that builds the `rebrand` branch and
 serves it at a `*.pages.dev` URL, so the v1 site can be reviewed on a phone
 without touching the live domain. The existing project (which serves
