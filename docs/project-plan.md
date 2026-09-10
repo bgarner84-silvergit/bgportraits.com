@@ -13,7 +13,19 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-09, session 7)
+## Status — start here (updated 2026-09-09, session 8)
+
+**Session 8 — cutover reframed and sequenced.** Brandon's call: the bar for
+putting the new site on `bgportraits.com` is **A2P-ready, not launch-ready**.
+The deferred visual work (broken cutouts, hero, self-portrait, tiers, social
+proof) is refinement done live during the ~2-day A2P review window, not a
+precondition. Full runbook written at **`docs/launch-cutover.md`**; Phase 5
+below rewritten to match; memory saved
+(`a2p-ready-is-the-bar-for-cutover-not-launch-ready`).
+
+**Next action (session 9):** Step 1 of the runbook — Claude does the final
+pre-cutover check of `rebrand` against playbook §2 on the preview URL — then
+Brandon picks the cutover mechanism (runbook Step 2, Option A recommended).
 
 **Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
 Cloudflare preview project is live.** Added `@astrojs/sitemap`
@@ -313,17 +325,34 @@ which is off-limits.
   `prefers-reduced-motion` respected.
 - **Working state:** launch-ready on preview.
 
-## Phase 5 — Launch & A2P resubmission
-**~2 hrs.**
+## Phase 5 — Cutover & A2P resubmission
+**~2 hrs. Detailed runbook: `docs/launch-cutover.md`.**
 
-- Point the production domain at the new build on Cloudflare.
-- Verify live: privacy/terms URLs, consent widget behavior, footer NAP.
-- Refresh `widget-prechat.png` if the widget UI changed.
-- Read `reference/a2p-10dlc-playbook.md`, then resubmit the A2P 10DLC
-  customer-care campaign referencing the live site. Note for the reviewer that
-  the site is now a functioning business site. Warn whoever is listed as the
-  brand contact that they may be contacted.
-- **Working state:** live site; A2P campaign resubmitted.
+Reframed session 8: the bar for the cutover is **A2P-ready, not launch-ready**.
+Put the new Astro site on `bgportraits.com` so the A2P customer-care campaign can
+be resubmitted against a real business site (30922 was a coming-soon denial),
+then refine the deferred visual work live during the ~2-day review window. See
+memory `a2p-ready-is-the-bar-for-cutover-not-launch-ready`.
+
+Sequence (full detail in the runbook):
+
+1. **[Claude]** Final pre-cutover check of `rebrand` vs. playbook §2 on the
+   preview URL.
+2. **[Brandon]** Pick the cutover mechanism — Option A (recommended): reconfigure
+   the original Pages project to build Astro, then merge `rebrand` → `main`.
+   Option B: move the custom domain to the `bgportraits-rebrand` project.
+3. **[Claude]** Verify the live site on `bgportraits.com` (pages, robots/sitemap,
+   NAP, widget, headers).
+4. **[Brandon + Claude]** A2P proof-of-consent on the live domain: confirm both
+   checkboxes unchecked, submit a real test lead to prove the transactional
+   checkbox gates submission, re-shoot `docs/widget-prechat.png`.
+5. **[Brandon]** Warn the A2P brand contact that verification outreach is coming.
+6. **[Brandon]** Resubmit the customer-care campaign in GoHighLevel, apex URL,
+   description addressing the 30922 denial, refreshed screenshot attached.
+7. Refinement window: photo retouch, self-portrait, tier re-cut, social proof,
+   likeness release — order per `v1-review.md`.
+
+- **Working state:** live site on `bgportraits.com`; A2P campaign resubmitted.
 
 ---
 
