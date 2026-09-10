@@ -13,7 +13,7 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-09, session 8)
+## Status — start here (updated 2026-09-10, session 8)
 
 **Session 8 — cutover reframed and sequenced.** Brandon's call: the bar for
 putting the new site on `bgportraits.com` is **A2P-ready, not launch-ready**.
@@ -23,23 +23,46 @@ precondition. Full runbook written at **`docs/launch-cutover.md`**; Phase 5
 below rewritten to match; memory saved
 (`a2p-ready-is-the-bar-for-cutover-not-launch-ready`).
 
-**Cutover in progress (session 8):** pre-cutover check passed (all playbook
-§2–§5 items present on the merged code). Brandon approved a revised mechanism —
-the live project `bgportraits-com` turned out to be a Workers-Builds project
-(`wrangler deploy`, no build step), currently in a failed-build state on a
-harmless non-prod `rebrand` build, so instead of repairing it we promote the
-clean `bgportraits-rebrand` Pages project:
+**CUTOVER DONE (session 8) — the new site is live at `https://bgportraits.com`.**
+Pre-cutover check passed (all playbook §2–§5 items present). The live project
+`bgportraits-com` turned out to be a Workers-Builds project (`wrangler deploy`,
+framework autodetect — no build command), so rather than repair it we promoted
+the clean `bgportraits-rebrand` Pages project:
 
-1. `rebrand` → `main` merged (fast-forward, `0e3596c`) and pushed. **DONE.**
-2. `bgportraits-rebrand` production branch changed `rebrand` → `main`. **DONE.**
-3. First `main` → Production deploy on `bgportraits-rebrand`, then verify. **THIS COMMIT.**
-4. Move the `bgportraits.com` custom domain from `bgportraits-com` to
-   `bgportraits-rebrand`. **PENDING.**
-5. Disconnect `bgportraits-com`'s git integration; keep it ~a week as rollback
-   (its `.workers.dev` URL still serves the coming-soon page). **PENDING.**
-6. Then runbook Steps 3–6: verify live on `bgportraits.com`, A2P
-   proof-of-consent on the live domain, warn the brand contact, resubmit the
-   customer-care campaign.
+1. `rebrand` → `main` merged (fast-forward) and pushed. **DONE.**
+2. `bgportraits-rebrand` production branch changed `rebrand` → `main`; first
+   `main` → Production deploy (`9bd51f7`) succeeded. **DONE.**
+3. `bgportraits.com` custom domain moved off `bgportraits-com` onto
+   `bgportraits-rebrand` (had to remove from the old project first — the apex
+   DNS record is service-managed / read-only and a second project can't
+   overwrite it). Status **Active, SSL enabled**. Total outage window ~90 s
+   (brief 522). **DONE.**
+4. `bgportraits-com` git integration **disconnected** — no more auto-builds. Its
+   last deployment (`698c440f`, which is the *new* site — its build system
+   autodetected Astro and deployed it too) stays frozen on
+   `bgportraits-com.bgarner84.workers.dev` as a rollback anchor. The
+   coming-soon page is still in that project's version history (`fb4b2f18`) if a
+   true rollback to it is ever wanted. **DONE.**
+
+**Verified live on `bgportraits.com`:** `/`, `/privacy`, `/terms` all 200;
+`/robots.txt` + `/sitemap-index.xml` + `/sitemap-0.xml` correct; canonical and
+`og:image` absolute to the apex; LeadConnector widget (`6a94ed46852536cc91868a08`)
+loads. **One known wart:** unknown paths return HTTP 200 serving the homepage
+(SPA-style fallback), i.e. soft-404s — not an A2P blocker (zero real 404s), but
+add `src/pages/404.astro` in the refinement window so Cloudflare serves a real
+404.
+
+**Next — runbook Steps 4–6 (need Brandon):**
+- A2P proof-of-consent on the live domain: open the widget on `bgportraits.com`,
+  confirm both consent checkboxes present + unchecked, disclosure text intact;
+  submit one real test lead with the transactional box unchecked (must refuse)
+  then checked (must land in GHL). Then Claude re-shoots `docs/widget-prechat.png`
+  from the live flow.
+- Warn whoever is listed as the A2P brand contact that verification outreach is
+  coming (playbook §1.2).
+- Resubmit the customer-care / transactional campaign in GoHighLevel — apex URL,
+  description stating the site is now a complete operating business (addressing
+  the 30922 denial), refreshed screenshot attached.
 
 **Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
 Cloudflare preview project is live.** Added `@astrojs/sitemap`

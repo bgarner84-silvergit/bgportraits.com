@@ -177,5 +177,30 @@ The deferred backlog, in the order `v1-review.md` recommends:
 6. **Likeness release** (`docs/likeness-release.md`) — Texas attorney review,
    then signed. Required before any shoot photo runs in a paid ad.
 
+Also add **`src/pages/404.astro`** — right now unknown paths on the live site
+return HTTP 200 serving the homepage (Cloudflare SPA-style fallback), i.e.
+soft-404s. Astro emits `404.astro` as `/404.html` and Cloudflare then serves a
+real 404. Five-minute fix; not an A2P blocker.
+
 Structured-data enrichment (review 4.3) and mobile-nav polish (3.6) are
 low-priority and can wait.
+
+---
+
+## Cutover record (session 8, 2026-09-10)
+
+Executed. `https://bgportraits.com` now serves the new Astro site.
+
+- `rebrand` → `main` fast-forward merge; `bgportraits-rebrand` Pages project
+  production branch switched to `main`; deploy `9bd51f7` green.
+- Custom domain `bgportraits.com` moved off the old `bgportraits-com`
+  Workers-Builds project onto `bgportraits-rebrand`. The old apex record is
+  service-managed / read-only, so it had to be **removed from the old project
+  first**, then added to the new one — ~90 s of 522 in between. Now Active, SSL
+  enabled.
+- `bgportraits-com` git integration disconnected (it had also autodetected and
+  deployed the new site). Its version history still holds the coming-soon page
+  (`fb4b2f18`) for a true rollback; its frozen `.workers.dev` deployment is the
+  quick rollback anchor.
+- Rollback if needed: re-add the custom domain to `bgportraits-com` (roll it
+  back to `fb4b2f18` first if the coming-soon page is wanted). Minutes.
