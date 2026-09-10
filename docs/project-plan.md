@@ -48,16 +48,22 @@ the clean `bgportraits-rebrand` Pages project:
 `/robots.txt` + `/sitemap-index.xml` + `/sitemap-0.xml` correct; canonical and
 `og:image` absolute to the apex; LeadConnector widget (`6a94ed46852536cc91868a08`)
 loads. **One known wart:** unknown paths return HTTP 200 serving the homepage
-(SPA-style fallback), i.e. soft-404s — not an A2P blocker (zero real 404s), but
-add `src/pages/404.astro` in the refinement window so Cloudflare serves a real
-404.
+(no 404 page in the build, so Cloudflare falls back to `index.html`), i.e.
+soft-404s — not an A2P blocker (zero real 404s). Fix is `src/pages/404.astro`;
+Brandon put it at the **top of the refinement backlog** (item 0 in
+`launch-cutover.md` Step 7).
+
+**Widget consent — VERIFIED on the live domain (session 8):** submitting with
+the SMS-consent box unchecked succeeds, the lead is recorded as
+not-SMS-consented, and the confirmation screen states no texts will be sent.
+This is the correct pattern — the checkbox must *not* block submission (that
+would make consent a condition of contact). `a2p-10dlc-playbook.md` §5 was
+corrected accordingly; memory
+`a2p-consent-checkbox-must-not-block-form-submission` saved.
 
 **Next — runbook Steps 4–6 (need Brandon):**
-- A2P proof-of-consent on the live domain: open the widget on `bgportraits.com`,
-  confirm both consent checkboxes present + unchecked, disclosure text intact;
-  submit one real test lead with the transactional box unchecked (must refuse)
-  then checked (must land in GHL). Then Claude re-shoots `docs/widget-prechat.png`
-  from the live flow.
+- Claude re-shoots `docs/widget-prechat.png` from the live flow (pre-submit
+  screen: both checkboxes unchecked + full disclosure).
 - Warn whoever is listed as the A2P brand contact that verification outreach is
   coming (playbook §1.2).
 - Resubmit the customer-care / transactional campaign in GoHighLevel — apex URL,

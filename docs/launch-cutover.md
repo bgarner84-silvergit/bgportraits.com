@@ -160,7 +160,17 @@ Ongoing work now targets whatever branch became production in Step 2 (Option A:
 `main`; Option B: `rebrand`). Small refinements can go straight there for this
 solo repo, or via short-lived branches if a change is risky.
 
-The deferred backlog, in the order `v1-review.md` recommends:
+The deferred backlog:
+
+0. **`src/pages/404.astro`** (top of the backlog, session 8) — unknown paths on
+   the live site currently return HTTP 200 serving the homepage (no 404 page in
+   the build, so Cloudflare falls back to `index.html`), i.e. soft-404s that
+   Google can index as duplicate homepages. Astro emits `404.astro` as
+   `dist/404.html` and Cloudflare then serves it with a real 404 status for
+   unmatched routes. ~10 min including an on-brand design. Not an A2P blocker,
+   but first in line to fix.
+
+Then, in the order `v1-review.md` recommends:
 
 1. **Photo retouch session** (review 1.1, 1.4, 3.1, 3.5) — re-export the five
    cutouts with frame-edge headroom, add contact shadows, swap the hero to a
@@ -176,11 +186,6 @@ The deferred backlog, in the order `v1-review.md` recommends:
    likeness release.
 6. **Likeness release** (`docs/likeness-release.md`) — Texas attorney review,
    then signed. Required before any shoot photo runs in a paid ad.
-
-Also add **`src/pages/404.astro`** — right now unknown paths on the live site
-return HTTP 200 serving the homepage (Cloudflare SPA-style fallback), i.e.
-soft-404s. Astro emits `404.astro` as `/404.html` and Cloudflare then serves a
-real 404. Five-minute fix; not an A2P blocker.
 
 Structured-data enrichment (review 4.3) and mobile-nav polish (3.6) are
 low-priority and can wait.
