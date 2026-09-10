@@ -23,9 +23,23 @@ precondition. Full runbook written at **`docs/launch-cutover.md`**; Phase 5
 below rewritten to match; memory saved
 (`a2p-ready-is-the-bar-for-cutover-not-launch-ready`).
 
-**Next action (session 9):** Step 1 of the runbook — Claude does the final
-pre-cutover check of `rebrand` against playbook §2 on the preview URL — then
-Brandon picks the cutover mechanism (runbook Step 2, Option A recommended).
+**Cutover in progress (session 8):** pre-cutover check passed (all playbook
+§2–§5 items present on the merged code). Brandon approved a revised mechanism —
+the live project `bgportraits-com` turned out to be a Workers-Builds project
+(`wrangler deploy`, no build step), currently in a failed-build state on a
+harmless non-prod `rebrand` build, so instead of repairing it we promote the
+clean `bgportraits-rebrand` Pages project:
+
+1. `rebrand` → `main` merged (fast-forward, `0e3596c`) and pushed. **DONE.**
+2. `bgportraits-rebrand` production branch changed `rebrand` → `main`. **DONE.**
+3. First `main` → Production deploy on `bgportraits-rebrand`, then verify. **THIS COMMIT.**
+4. Move the `bgportraits.com` custom domain from `bgportraits-com` to
+   `bgportraits-rebrand`. **PENDING.**
+5. Disconnect `bgportraits-com`'s git integration; keep it ~a week as rollback
+   (its `.workers.dev` URL still serves the coming-soon page). **PENDING.**
+6. Then runbook Steps 3–6: verify live on `bgportraits.com`, A2P
+   proof-of-consent on the live domain, warn the brand contact, resubmit the
+   customer-care campaign.
 
 **Session 7 — `robots.txt` + `sitemap.xml` (review 4.2) closed, and the
 Cloudflare preview project is live.** Added `@astrojs/sitemap`
