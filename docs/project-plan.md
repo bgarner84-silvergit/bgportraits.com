@@ -45,12 +45,15 @@ session:
    `og:image`, published prices) — see "Done this session" below.
 3. **Prices are now public** — `$399 / $599 / $849` "from" figures
    (`project-brief.md` decision 23, supersedes decision 18).
-4. **Widget placement confirmed:** the LeadConnector widget renders embedded
-   at the bottom-centre of the page, not a corner bubble. Copy now matches
-   that. Rebranding it to a collapsed bottom-right bubble in the amber/carbon
-   palette (review item 1.3) is a GoHighLevel settings change Brandon makes;
-   if he does it, revert the one line in `Inquire.astro` and re-shoot
-   `widget-prechat.png`.
+4. **Widget rebranded in GoHighLevel this session (review 1.3)** and verified
+   in Chrome against the local build: amber header (was the red call-centre
+   panel), heading "Tell me about your athlete", warm welcome message, no
+   prefilled text, fields Name / Phone / Message only. **Both consent
+   checkboxes present and unchecked, disclosure text unchanged.** It still
+   renders as an inline embed at the bottom-centre of the page, not a corner
+   bubble — GHL did not take the launcher-position setting — so the
+   `Inquire.astro` copy ("message form at the bottom of this page") is correct
+   and stays. `widget-copy.md` holds the field-by-field text used.
 
 **Done this session:**
 
@@ -90,10 +93,12 @@ session:
 
 - **4.2:** no `robots.txt` / `sitemap.xml` — mechanical, `@astrojs/sitemap` plus
   a four-line file. Can be done any time; not a blocker.
-- **1.3:** rebrand the LeadConnector widget in GoHighLevel (amber/carbon theme,
-  "Tell me about your athlete" heading, collapsed bottom-right bubble). GHL
-  settings only — safe per playbook §5. If done, revert the one `Inquire.astro`
-  line and re-shoot `widget-prechat.png`.
+- **1.3 (widget) — mostly done, two things left):** re-shoot
+  `docs/widget-prechat.png` from the rebranded widget for the A2P submission,
+  and on the *deployed* site confirm the transactional checkbox actually gates
+  form submission (can't be tested without submitting a real lead). Optional
+  polish: the amber is a full header fill, heavier than `brand.md`'s
+  "amber is never a background wash" — reshape to a carbon header if GHL allows.
 - **2.3–2.5:** re-cutting the three tiers so they ladder on *kind* not
   *quantity*, and moving the single amber button to Packages.
 - **1.5:** no social proof anywhere — ask the Shepherd family for two sentences
