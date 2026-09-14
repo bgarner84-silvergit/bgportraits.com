@@ -13,7 +13,14 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-10, session 8)
+## Status — start here (updated 2026-09-14, session 9)
+
+**A2P campaign APPROVED (session 9).** The customer-care campaign resubmitted
+in session 8 against the live site passed review — brand and campaign are both
+now Approved. `docs/gaps.md` updated to close out the A2P open-work item. The
+refinement backlog in `docs/launch-cutover.md` Step 7 is now the active work
+queue, starting with `src/pages/404.astro` (item 0 — the site currently
+soft-404s on unmatched routes).
 
 **Session 8 — cutover reframed and sequenced.** Brandon's call: the bar for
 putting the new site on `bgportraits.com` is **A2P-ready, not launch-ready**.

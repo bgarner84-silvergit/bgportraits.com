@@ -1,5 +1,14 @@
 # bgportraits.com — A2P status and open work
 
+## Status as of 2026-09-14
+
+**A2P 10DLC: brand APPROVED, campaign APPROVED.** The rebuilt site (see
+`project-plan.md` session 8, live at `https://bgportraits.com` since
+2026-09-10) was resubmitted for the customer-care campaign and passed review —
+no further A2P work is open on this brand. The "Open work" section below is
+historical, kept for the record of what the 30922 denial required and how it
+was resolved.
+
 ## Status as of 2026-09-01
 
 **A2P 10DLC submission: brand APPROVED, campaign DENIED — error 30922 (Website).**
@@ -33,7 +42,9 @@ Updated 2026-09-07: the "no mockup or design phase" part is superseded. A design
 and planning phase is now in scope, built around a custom football shoot. See
 `project-brief.md`.
 
-**Not started.** Deferred to a later session.
+**Done (session 8/9).** Site rebuilt and live at `bgportraits.com`; campaign
+resubmitted and approved. See `project-plan.md` and `launch-cutover.md` for
+the rebuild and cutover detail.
 
 **Preserve on rebuild:** `privacy.html`, `terms.html`, the footer address and
 phone, and the LeadConnector widget (ID `6a94ed46852536cc91868a08`) with both
