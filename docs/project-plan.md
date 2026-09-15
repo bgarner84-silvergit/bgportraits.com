@@ -13,7 +13,49 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-14, session 9)
+## Status — start here (updated 2026-09-14, session 10)
+
+**Session 10 — AI Sales Boardroom run on the GoHighLevel build; Week 0 now leads the
+queue.** Two board passes at the same question (what automation to build, in what order,
+with what copy). The second ran five advisors as genuinely independent agents — separate
+context each, no visibility into one another, no access to the first pass's conclusions —
+which is the fix for the manufactured-disagreement gap these boardrooms have. Packets:
+`docs/ghl-board-simulation.md` (first pass) and
+`docs/ghl-board-simulation-independent.md` (second, authoritative). Both kept so the
+methods can be compared.
+
+What the independent pass found that the first missed:
+
+- **The capacity arithmetic.** At the 1–4 session/month ceiling and current tiers, the
+  theoretical best case is ~$40.7K/yr gross before costs; income replacement would need
+  ~$4,167/client, roughly 7× the emphasized tier. Two seats ran it separately.
+- **The tier ladder is inverted.** Revenue per composite falls $399 → $200 → $170, so
+  margin per unit of the scarcest input (Photoshop hours) *declines* as a customer spends
+  more. Derives from the published tiers — no data needed.
+- **The differentiator aims at the wrong competitor.** "I shoot every session myself"
+  differentiates against multi-shooter studios; the real alternative is the team/school
+  photographer, where the parent never met a photographer at all. Replacement frame is
+  uniqueness and permanence. Note `brand.md` already had this right ("the portrait you'll
+  frame for twenty years") while `project-brief.md` positioning did not.
+- **A silent-failure risk in the widget wiring.** The LeadConnector widget is a **Live
+  Chat** channel, not SMS. A bot enabled only on SMS answers it with silence and logs
+  nothing (conflict guide C-14). Folded into `Projects\GoHighLevel\CLAUDE.md` T-00.
+
+**Brandon's call this session:** the GoHighLevel build is **infrastructure for the
+insurance line, not a photography ROI play**. Photography is the test rig. That reverted
+the architecture to Pattern C (it was the Sales Ops seat's own stated flip condition) and
+changed the success measure from portrait bookings to how much of the build transfers.
+
+**Queue change — supersedes the session-9 ordering below.** The active queue is now the
+four **Week 0** tasks in `Projects\GoHighLevel\CLAUDE.md`: unit cost sheet, differentiator
+rewrite, T-00/T-01 channel and sleep audit, connect Stripe. None is a build; together about
+one evening. The `launch-cutover.md` Step 7 refinement backlog — starting with the 404 page
+— resumes after that. Rationale: the 90-day north star is lead flow end-to-end, and a
+soft-404 blocks no leads now that A2P is approved.
+
+The generalized lesson from the pricing half of the session was written up as
+`Projects\reference\commoditization-resistance.md` — cross-venture, since the insurance line
+starts out more commoditized than photography ever was.
 
 **A2P campaign APPROVED (session 9).** The customer-care campaign resubmitted
 in session 8 against the live site passed review — brand and campaign are both
