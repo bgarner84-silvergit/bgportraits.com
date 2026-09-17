@@ -49,6 +49,53 @@ Brandon's sign-off on the revision-policy draft, and — once both land — upda
 prices now that the floor is known. The differentiator rewrite, T-00/T-01 audit, and Stripe
 connection (the other three Week 0 tasks from session 10) are still open.
 
+**Redirect, same session — Champion's Legacy repricing target changed.** Brandon reviewed
+`docs/Sports_Portrait_Framing.md` (new framing/fulfillment SOP reference he added) and gave
+a clear call: stop treating the live $849 price as the thing to defend or the gap as the
+thing to close — it was a placeholder, not an anchor. Champion's Legacy is being rebuilt as
+a deliberately premium, heirloom-positioned tier for wealthier parents (fewer, higher-price
+clients, not more cheap ones), which is the same fix the session-10 independent board pass
+flagged on the capacity math. No cost-motivated downgrades on archival materials — Cotton
+Rag mat and reversible mounting are locked regardless of price; the only real lever left is
+launching on anti-reflective UV acrylic (Optium-class) with Museum Glass as a future upsell,
+both still needing real vendor quotes — **Brandon then deferred chasing that quote
+indefinitely; it's not blocking anything else in the queue.** Brandon also wants the
+"you'll frame this for twenty years" line rewritten — he still likes the permanence/heirloom emotional core, not the
+sentence — so that lands with the differentiator rewrite, not separately. Detail and the
+updated materials spec: `docs/unit-cost-sheet.md`.
+
+**Differentiator rewrite DONE and written into `src/` — `docs/differentiator-copy.md`.**
+Covers the hero block and the Approach section. Four calls taken before drafting: permanence
+**closes** rather than leads, contrast with the team/school photographer stays **implicit**
+(never named), archival specs are **named** in customer copy, and scope is hero + positioning
++ Approach only (packages/tiers/About deferred, since tier copy has to change again once
+pricing lands).
+
+Locked hero line, after eleven candidates: **"One athlete. One portrait. The one in their
+head."** Approach grew from three steps to four, the fourth ("Made to outlast the season")
+carrying permanence as its own closing beat and ending on "Seasons end. This does not." The
+old explicit-contrast lines are gone — "high-volume team shooters," "no line of teammates
+waiting behind them," "a shot list somebody else wrote," "not a preset run across a roster."
+`Hero.astro`, `Approach.astro` and `brand.md` edited; `npm run build` passes and the new
+strings verified in `dist/`. **Uncommitted and unpushed** — `main` auto-deploys to the live
+apex, so pushing publishes it.
+
+**NEXT SESSION STARTS HERE:** `src/components/Hero.astro` **lines 27–28** — the hero lead
+paragraph ("Your athlete already knows what the picture looks like. Everything after that —
+the session, the compositing, the print — exists to make it real."). Brandon's read: close
+but not final, and critical to get right since it is the first prose under the new headline.
+The constraints it has to keep satisfying are in `differentiator-copy.md`'s harmonization
+section — it must not re-explain the process (that duplicates Approach step 01), must not
+reuse "frame by frame" (step 03's title), and its three nouns currently preview Approach
+steps 02/03/04, which is worth preserving or replacing deliberately rather than by accident.
+
+**One open decision, deliberately shipped conservative:** step 04 currently scopes the
+archival claim to "the framed piece," which is true today since only Champion's Legacy
+includes framing. Making **archival pigment print stock standard on every tier** (a few
+dollars per 8×10) would let that step open with an unqualified "prints are made on archival
+pigment stock" and make the permanence claim true site-wide. One-line change, but it is a
+promise about fulfillment, not a copy preference.
+
 ## Status (session 10, superseded above)
 
 **Session 10 — AI Sales Boardroom run on the GoHighLevel build; Week 0 now leads the

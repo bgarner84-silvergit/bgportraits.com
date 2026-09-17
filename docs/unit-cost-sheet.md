@@ -11,6 +11,32 @@ so a later pass can tell which numbers are still soft. A turnaround/revision pol
 is in `turnaround-revision-policy.md`, pending Brandon's sign-off — not yet reflected here
 because it could change the 2.5 hr overhead assumption once finalized.**
 
+**Redirect (2026-09-16, same session): Champion's Legacy is no longer being recut to close
+the gap against the live $849 price.** Brandon's call: that price was a starting point, not
+an anchor — this tier is being rebuilt from the archival floor up as a deliberately premium,
+heirloom-positioned offer aimed at wealthier parents (fewer, higher-price clients over more,
+cheaper ones — the same fix the independent board pass in `ghl-board-simulation-independent.md`
+found necessary on the capacity math). Do not read the "Gap" column below as the thing to
+shrink; read the floor cost as the number the new price has to clear by a wide, premium
+margin, not just beat.
+
+**Materials direction, per Brandon:** no cost-motivated downgrades on the archival
+components. Lock **100% Cotton Rag matboard** and **fully reversible mounting** — the
+Alpha-Cellulose mat and Anodized Aluminum frame options in `Sports_Portrait_Framing.md`'s
+downgrade matrix are off the table; the point is no longer minimizing this line. Frame
+style (gallery black vs. color-matched wood) is a brand/aesthetic call, not a cost lever,
+and gets decided with the differentiator rewrite, not here.
+
+**Glazing — two-tier plan:** launch spec is a UV-filtering, **anti-reflective acrylic**
+(the product in this category is Tru Vue's Optium Museum Acrylic or equivalent — not the
+same item as `Sports_Portrait_Framing.md`'s plain "Conservation Clear® Acrylic," which is
+UV-rated but standard-reflection, not anti-reflective). Museum Glass® is the upsell/future
+option once volume justifies the heavier, pricier build. **Caution: Optium-class
+anti-reflective acrylic is not in the SOP doc's pricing and is not cheaper than Museum
+Glass** in general framing-market pricing — treat it as its own line needing a fresh vendor
+quote, likely in the same $90–150+ band as glass, not the $60–90 plain-acrylic band. This is
+general industry knowledge, not a verified quote — get one before locking a number.
+
 ---
 
 ## Deliverable model (confirmed, replaces what's live on the site today)
@@ -90,9 +116,16 @@ the whole Champion's Legacy row as soft until a vendor quote replaces it.
 
 ## Still open before this is final
 
-1. **Get real framing quotes** to replace the two `[ESTIMATE]` numbers in Champion's
-   Legacy — everything else in this sheet is `[ACTUAL]`, so this row is the only soft one.
+1. ~~Get a real vendor quote for the locked archival build~~ — **deferred indefinitely,
+   Brandon's call (2026-09-16): not worth holding the rest of this on.** The Champion's
+   Legacy row stays `[ESTIMATE]` until he revisits framing on his own schedule; nothing else
+   here waits on it.
 2. **Turnaround/revision policy** — draft in `turnaround-revision-policy.md`, pending
    Brandon's sign-off. Once confirmed, re-check whether 2.5 hr overhead still holds.
-3. Once 1–2 are locked, this sheet gets one more pass and then the ceiling conversation
-   (actual prices to charge, not just the floor) can start.
+3. **Differentiator rewrite (Week 0 queue) now folds in the permanence/heirloom angle** —
+   Brandon does not want to keep the "you'll frame this for twenty years" line as written
+   and wants sharper copy built on the same emotional core (this lasts; that's the thing
+   that makes the price rational to a parent). Land this alongside the rewrite, not before.
+4. Once 1–3 are locked, this sheet gets one more pass — not to close the $849 gap, but to
+   set the new premium price and confirm it clears the real floor by the margin a premium
+   positioning needs, not just beats it.

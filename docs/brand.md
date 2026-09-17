@@ -128,16 +128,18 @@ selection, not a box.
 Reserved for later: a "BG" monogram for the favicon and social avatars, drawn
 from the same condensed forms. Not needed to launch.
 
-## Placeholder copy
+## Hero copy — decided
 
-Final copy is Phase 4. The style tile uses a working hero line so the type has
-something real to carry:
+**Locked (2026-09-16):** "One athlete. One portrait. The one in their head."
+Set over four lines, breaking after "The one". Rationale and the full option set:
+`differentiator-copy.md`.
 
-- Working: "One athlete. One portrait that owns the wall."
-- Alternates to weigh in Phase 4:
-  - "The portrait your athlete earns."
-  - "Built one athlete at a time."
-  - "The portrait you'll frame for twenty years."
+The earlier alternates are retired, including **"The portrait you'll frame for
+twenty years"** — the permanence idea it carried now closes the Approach section
+instead of opening the page, which is where it does more work.
+
+Superseded working line, kept for the record: "One athlete. One portrait that owns
+the wall."
 
 Primary button label: "Request a session" — honest, since the form opens an
 inquiry into GoHighLevel rather than a live booking.
