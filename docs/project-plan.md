@@ -13,7 +13,43 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-14, session 10)
+## Status — start here (updated 2026-09-16, session 11)
+
+**Session 11 — Week 0's unit cost sheet done; deliverable model and print allocation
+locked; GHL speed-to-lead workflow built (A1, not Pattern C — Brandon's explicit call).**
+
+**1. GHL build: A1, not Pattern C.** Brandon chose to build the A1 scripted speed-to-lead
+drip tonight rather than the queued Pattern C bot-gated workflow, as an explicit test build
+via Claude in Chrome browser automation. Built in the Integristream Consulting sub-account:
+`Speed-to-Lead SMS + Email`, currently **Draft, untested**. Full detail and open items
+(unfiltered trigger, unverified stage-move opportunity linkage, hardcoded notification
+number) in `Projects\GoHighLevel\CLAUDE.md` and `docs/ghl-workflows.md`.
+
+**2. Unit cost sheet done — Week 0 task #1.** `docs/unit-cost-sheet.md`: **all three tiers
+are priced roughly 2–3x below cost** once real hours are counted at Brandon's $100/hr
+target rate. Floor costs: Future Star $787 (vs. $399 live), Future Legend $1,253 (vs.
+$599), Champion's Legacy $1,835–$2,020 (vs. $849 — the range is because the framing cost
+is still an estimate, no vendor quote yet). Every input in the sheet is tagged `[ACTUAL]`
+or `[ESTIMATE]` so the one soft number stays easy to spot.
+
+**3. Deliverable model corrected and locked.** `packages.ts` currently promises each
+composite in a package as "a different concept" — full independent creative work. That's
+not the real model and needs correcting: composite #1 is the expensive custom one, every
+composite after it is a cheaper variant built off the first. Also locked: a new low-cost,
+high-impact bonus — a fast background cutout plus reusable instructions for the client to
+try their own AI-generated backgrounds, delivered same-visit while the real composite is
+still in progress (~15 min real cost) — goes in **every** tier. Physical product locked:
+a small 8×10 print in every tier, plus exactly one big framed print reserved for Champion's
+Legacy only. Turnaround/revision policy **drafted, not yet approved** —
+`docs/turnaround-revision-policy.md`.
+
+**Not yet done:** a real framing vendor quote (the one soft number in the cost sheet),
+Brandon's sign-off on the revision-policy draft, and — once both land — updating
+`packages.ts` copy to match the corrected deliverable model and re-cutting final tier
+prices now that the floor is known. The differentiator rewrite, T-00/T-01 audit, and Stripe
+connection (the other three Week 0 tasks from session 10) are still open.
+
+## Status (session 10, superseded above)
 
 **Session 10 — AI Sales Boardroom run on the GoHighLevel build; Week 0 now leads the
 queue.** Two board passes at the same question (what automation to build, in what order,

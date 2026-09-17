@@ -403,29 +403,32 @@ Keep this build self-contained to the bgportraits GHL sub-account.
 
 ## Next session — pick up here
 
-**Goal:** Build the **A1 speed-to-lead** workflow and write its copy.
+**A1 speed-to-lead built 2026-09-16** — see `GoHighLevel/CLAUDE.md` "Current state" for the
+full step list and open items. Two things changed from the plan below since it was written:
 
-**Starting point:** The confirmed-working site inquiry widget. Use the fields that widget
-actually captures as the workflow's inputs — see `docs/widget-copy.md` and
-`docs/widget-prechat.png`. Map each captured field to a GHL contact field / custom field
-before building the workflow.
+- **A2P is approved now** (2026-09-14), so the "email-only, stub the SMS" workaround is
+  moot — the built workflow is SMS-first with no stubbing.
+- **No email step exists at all**, stubbed or otherwise — the widget only collects
+  name/phone/message (see `widget-copy.md`), so there's no email address to send to. The
+  A1 recipe's parallel email step was dropped rather than stubbed.
 
-**A2P workaround:** A2P 10DLC review is still pending, so **build A1 with the email step
-only for now** and stub the SMS steps (add them as disabled/draft actions with the copy
-written, ready to switch on when the A2P response lands). Email is the proxy for SMS while
-we wait.
+**Goal now:** Test the built workflow end to end, then decide on the trigger-scoping and
+stage-move open items noted in `GoHighLevel/CLAUDE.md` before publishing.
 
 **Concrete tasks:**
-1. Confirm the widget's captured fields and create matching GHL fields.
-2. Draft workflow trigger (Form Submitted from the widget) + the email step copy
-   (receipt-confirmation, what-happens-next, portfolio + consult booking link).
-3. Write the SMS copy alongside it (per the A1 recipe above) but leave those steps off.
-4. Add the internal notification step and the 1-hour follow-up branch.
-5. Move the Opportunity to the **Inquiry** stage.
-6. Test by submitting the widget as a fake lead.
+1. Change the "Wait 1 Minute" step to the intended 1 hour before it goes live — it's short
+   on purpose for tonight's testing.
+2. Use GHL's **Test Workflow** feature (or submit the widget as a fake lead) and confirm:
+   the first SMS sends, the internal notification reaches +18179197658, the follow-up SMS
+   fires after the wait, the tag gets applied, and the stage-move step doesn't silently
+   no-op (see the Update Opportunity caveat in `GoHighLevel/CLAUDE.md`).
+3. Decide whether the trigger needs scoping beyond "Contact Created, no filter" once a
+   second lead source (e.g. the insurance webhook) starts landing contacts in the same
+   sub-account.
+4. Publish once tested.
 
-**Do not** start the pipeline stages or A2 missed-call text-back until A1's email path is
-tested end to end.
+**Do not** start the pipeline stages or A2 missed-call text-back until this is tested end
+to end and published.
 
 ---
 
