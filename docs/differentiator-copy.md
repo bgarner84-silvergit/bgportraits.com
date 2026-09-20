@@ -1,8 +1,16 @@
 # Differentiator & positioning copy
 
-**Status (2026-09-16): DECIDED and written into `src/`. Uncommitted — not pushed, not
-live.** Covers the hero block and the Approach section. Packages, tiers, and About are
-a later pass, deliberately, because tier copy has to change again once pricing lands.
+**Status (2026-09-19, session 12): SUPERSEDED IN PART, and LIVE.** The hero line locked
+on 2026-09-16 did not survive contact. Brandon reopened it twice, and the page now runs
+on **"One athlete. One portrait. One legacy."** Everything below is updated to the
+shipped copy, with the original reasoning kept because it is still the reasoning that
+governs the page. Shipped in commit `d7cd7c4` and verified live on bgportraits.com.
+
+Scope also grew past the original hero-plus-Approach boundary. Tier names, the Gallery
+intro, the About opening line, and the site metadata were all pulled in, because locking
+"legacy" collided with the `Champion's Legacy` tier name and exposed how much retired
+copy was still running elsewhere. Tier **prices** remain untouched and are a separate
+workstream.
 
 **Why this rewrite happened.** Two problems from two sessions:
 
@@ -34,38 +42,58 @@ a later pass, deliberately, because tier copy has to change again once pricing l
 
 > North Richland Hills, TX · Custom athlete portraits
 
-**Headline**
+**Headline** (revised 2026-09-19)
 
 > One athlete.
 > One portrait.
-> The one
-> in their head.
+> One legacy.
 
-Four lines, breaking after "The one" — a syntactic seam, so nothing snaps mid-phrase.
-It also isolates "The one" as its own beat, which carries the singularity idea on a
-single line.
+Three beats, three hard stops, one per line.
 
-*Why this line.* It names the emotional product: the version of themselves the kid
-already carries around. The third "one" continues the pattern rather than introducing
-an unrelated idea, and it completes the sentence — one portrait, *the* one, the one in
-their head. Ends on a hard monosyllable, matching the stops on "athlete" and
-"portrait." It is unclaimable by anyone shooting a roster, and it says nothing about
-permanence, which is what frees permanence to close the page.
+*Why this line.* It keeps the two nouns that tell a parent who the work is for and
+what they are buying, and spends only the third beat on the payoff. The climb runs
+category, object, consequence. Crucially, *legacy* is a claim about **the object
+enduring**, which cotton rag and reversible mounting actually deliver, rather than a
+claim about the athlete's standing, which nobody can deliver. That distinction is the
+whole reason this word survived and "legend" did not.
 
-*What it replaced.* "One athlete. One portrait that owns the wall." — described the
-object's presence rather than what the work is.
+*What it replaced, and why the first lock failed.* The 2026-09-16 line was "One
+athlete. One portrait. The one in their head." It was defensible on every
+argument made for it below, and Brandon still rejected it after living with it,
+returning twice with bigger payoff words: "One Athlete. One Session. One Star." and
+"One session to create a legend." Both were argued against on the record. They drop
+the product noun, so the hero stops naming what is being sold; "star" and "legend"
+are status claims about a child that read as hype to precisely the restraint-buying
+parent the premium repricing targets; and "One session" duplicated Approach step 02's
+title verbatim. He reaffirmed the aspirational direction, which settled it. "Legacy"
+was the resolution: same emotional altitude, no unverifiable claim, and it is a
+parent's word rather than a teenager's.
 
-**Lead paragraph**
+*The lesson worth keeping.* A line can pass every craft test and still fail because
+the owner cannot stand behind it. Two rounds were spent defending a defensible line.
+The third move, switching from defending to building in his direction, is what
+produced something better than either starting point.
 
-> Your athlete already knows what the picture looks like. Everything after that — the
-> session, the compositing, the print — exists to make it real.
+**Lead paragraph** (revised 2026-09-19)
 
-Does two jobs: converts the headline's mental image into a promise of a real object,
-and its three nouns map directly onto Approach steps 02, 03 and 04, so the hero
-quietly previews the section below it.
+> A legacy has to hang somewhere. The session, the compositing, the print: all of it
+> exists to produce one finished piece, and to build it well enough to stay there.
 
-*What it replaced.* "Not a preset run across a roster" — put down the alternative,
-which the implicit call rules out.
+Does two jobs: the first sentence cashes an abstract word into a physical object
+immediately, so "legacy" never floats; and the three nouns still map onto Approach
+steps 02, 03 and 04, so the hero quietly previews the section below it. "Hang
+somewhere" and "stay there" close the loop on each other.
+
+*What it replaced.* "Your athlete already knows what the picture looks like..." was
+written to pay off "the one in their head" and was orphaned the moment the headline
+changed. This was session 11's designated next-session task, resolved by replacement
+rather than fine-tuning.
+
+*A conflict caught in drafting.* The selected draft opened "A season lasts a few
+months," which is the same move Approach step 04 closes on ("Seasons end. This does
+not."). Saying it in the hero would have spent the close before the reader reached it.
+The division that resolved it: **the hero asserts a real object made well; step 04
+supplies the specs and the emotional close.**
 
 **Buttons** unchanged — "Request a session" and "See the work."
 
@@ -83,7 +111,7 @@ photograph is *taken*, this is *built*. It names no one.
 **Section lead**
 
 > A photograph is captured in a fraction of a second. This is designed first, shot
-> second, then built by hand — concept, composite, grade, retouch — until it is a
+> second, then built by hand. Concept, composite, grade, retouch, until it is a
 > finished piece of work. Then it is made into something you can hang for good.
 
 The last sentence hands off to step 04 so permanence has somewhere to land.
@@ -97,13 +125,21 @@ The last sentence hands off to step 04 so permanence has somewhere to land.
 Pays off the headline as an actual process step. *Cut:* "Your athlete is not working
 through a shot list somebody else wrote" — explicit contrast.
 
-**02 — One athlete, one session**
-> However long it takes. The session runs until the frame is right, not until the clock
-> says stop — time and attention are what separate a portrait from a photograph.
+**02 — The session ends when it is right** (revised 2026-09-19)
+> Plan on about an hour, covering both static portraits and action frames. It runs until
+> the shots are right rather than until the clock says stop. Time and attention are what
+> separate a portrait from a photograph.
 
-Absorbs "however long it takes," which was the strongest authority line in the option
-set and was wasted in a hero. *Cut:* "No line of teammates waiting behind them." The
-remaining contrast is between two *categories*, not between you and another person.
+*Cut:* "No line of teammates waiting behind them." The remaining contrast is between two
+*categories*, not between you and another person.
+
+The title changed because "One athlete, one session" was one of five instances of the
+"one ___, one ___" cadence on the page, which is now reserved for the headline alone.
+
+Brandon added the session length. Watch the tension: "about an hour" and "not until the
+clock says stop" contradict each other if stated flatly, so the wording makes the hour an
+**expectation** and the open end a **promise** by hinging them on "rather than." This is
+now a public commitment about how sessions run, so it has to stay true.
 
 **03 — Built by hand, frame by frame**
 > Every hero image is cut from its background, composited into an art-directed scene,
@@ -145,6 +181,62 @@ kind of thing that silently reappears in a later edit:
 4. **"Built, not taken" is deliberately echoed**, not accidentally repeated — the
    section title states the category argument and the section lead proves it in the
    first sentence.
+
+## Session 12 harmonization: what locking "legacy" dragged in
+
+Eight structured questions were put to Brandon before any edit. The scope grew well past
+hero-plus-Approach, because one word collided with a tier name and that exposed how much
+retired copy was still live elsewhere.
+
+**Tier names came off the status ladder.** `Future Star` → **The Portrait**,
+`Future Legend` → **The Series**, `Champion's Legacy` → **The Framed Piece**. Two
+independent reasons. "Legacy" could not be both the brand-level promise and the name of
+the $849 tier alone, or the cheaper two read as the versions where the parent does not get
+the thing the headline sold them. And `Future Star` / `Future Legend` were themselves the
+hype register that fights the archival positioning. The new names describe scope. **Prices
+were not touched**; that is a separate workstream Brandon is taking on next.
+
+**The conservation spec moved to the point of purchase.** The top tier read "Framed
+archival print with anti-reflection glass," which did not match the locked materials
+direction and omitted every fact that persuades. It now names cotton rag matting, UV and
+anti-reflective glazing, and fully reversible mounting. This is item 2 of the Cialdini pass
+applied where it does the most work: authority through costly-to-fake detail, placed at the
+moment money is considered.
+
+**An unsupportable claim was cut.** "The place most families start" is social proof that
+one client cannot support. The Cialdini appendix below is explicit that faked proof costs
+the business permanently.
+
+**Retired copy was purged from metadata.** `site.tagline` and `site.description` still ran
+"one athlete at a time" and "one athlete, one session, one finished portrait," so the
+footer and the Google snippet were serving copy replaced in session 11. Tagline is now
+"Custom athlete portraits, built to outlast the season." The business name is not in the
+new description, which is fine: the `<title>` tag carries "Brandon Garner Photography" and
+that is the line people click.
+
+**The cadence was pulled back to one instance.** "One ___, one ___" was firing five times:
+hero, Approach step 02, the Gallery intro, the About opening, and the meta description.
+Now only the headline uses it. Gallery reads "Every frame here was planned and built for
+one athlete, start to finish." About opens "I build custom portraits for individual
+athletes."
+
+**Em dashes were removed from all visible copy, permanently.** Brandon asked for every one
+of them gone. Six replacements plus the wordmark's screen-reader label, verified at zero
+across all three rendered pages. Colons, full stops, and commas carry the load instead. En
+dashes stay, because "Dallas–Fort Worth" is a different character and correct. Code
+comments were untouched, being invisible to visitors. **This is a standing preference, not
+a one-off edit.**
+
+**Brandon's portrait is finally in About.** Open since session 7 and listed as item 4 of the
+Cialdini pass ("liking"). Cropped from a 4000x6000 full-length original to a 4:5 head and
+shoulders frame at 1600x2000, anchored on the face rather than the frame centre. It sits in
+the same hairline frame as the hero print. The stronger unused asset named in that pass,
+that he wants this *as a parent*, is still unwritten.
+
+**Layout, for the record.** The hero composite moved below the headline rather than beside
+it, the hero column is capped at 40rem so it does not strand in the 1360px shell, the
+figure is capped so the 4:5 source never letterboxes, `02-jack-stadium` came out of the
+gallery, and the "Recommended" badge was removed so the three tier names align on one line.
 
 ## One open decision
 
@@ -243,12 +335,30 @@ their head" fixes all three and keeps the meaning.
 
 ## Files changed
 
-| File | Change | State |
-|---|---|---|
-| `src/components/Hero.astro` | Headline, lead paragraph | Edited, uncommitted |
-| `src/components/Approach.astro` | Section title, section lead, steps 01–04 | Edited, uncommitted |
-| `docs/brand.md` | Hero line recorded; "twenty years" alternate retired | Edited, uncommitted |
+Session 11, commit `854b92d`:
 
-`npm run build` passes; verified the new strings are present in `dist/index.html` and
-the replaced lines are gone. **Not committed and not pushed** — `main` auto-deploys to
-`bgportraits.com`, so pushing puts this live.
+| File | Change |
+|---|---|
+| `src/components/Hero.astro` | Headline, lead paragraph |
+| `src/components/Approach.astro` | Section title, section lead, steps 01 to 04 |
+| `docs/brand.md` | Hero line recorded; "twenty years" alternate retired |
+
+Session 12, commit `d7cd7c4`, eleven files:
+
+| File | Change |
+|---|---|
+| `src/components/Hero.astro` | New headline and lead; composite moved below the type; column and figure capped |
+| `src/components/Approach.astro` | Step 02 retitled and given the session length; section lead de-dashed |
+| `src/components/About.astro` | Opening line off the retired cadence; Brandon's portrait added |
+| `src/components/Gallery.astro` | Intro rewritten off the cadence |
+| `src/components/Inquire.astro` | Two em dashes replaced |
+| `src/components/Packages.astro` | "Recommended" badge and its dead CSS removed |
+| `src/components/Wordmark.astro` | Screen-reader label de-dashed |
+| `src/data/packages.ts` | Three tier renames; conservation spec named; false social proof cut |
+| `src/data/portfolio.ts` | `02-jack-stadium` removed from the gallery |
+| `src/data/site.ts` | Tagline and description rewritten. NAP and widget ID untouched |
+| `src/assets/brandon.jpg` | New. Cropped portrait, 1600x2000 |
+
+`npm run build` passes. Verified live on bgportraits.com, not just in `dist/`: the new
+strings are present, the replaced strings return zero, and there are zero em dashes across
+all three pages.

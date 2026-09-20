@@ -13,7 +13,122 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-16, session 11)
+## Status — start here (updated 2026-09-19, session 12)
+
+**Session 12: the hero was reframed a second time, the whole page was harmonized to it,
+and everything shipped to production.** Commit `d7cd7c4`, pushed, verified live against
+bgportraits.com rather than the local build. This is the first session whose work is
+actually on the public site.
+
+**1. The hero line changed again, and the reason matters more than the line.** Session 11
+locked "One athlete. One portrait. The one in their head." Brandon sat with it for two days
+and it did not hold. He came back twice reaching for a bigger payoff word, first "One
+Athlete. One Session. One Star.", then "One session to create a legend." Both were argued
+against on the record: they drop the product noun, so the headline stops naming what a
+parent is buying, and "star" and "legend" are status claims about the child that cannot be
+delivered and read as hype to exactly the wealthier, restraint-buying parent the pricing
+redirect is aimed at. He reaffirmed the direction anyway, which settled it, and the
+resolution was a one-word swap he immediately preferred:
+
+> **One athlete. One portrait. One legacy.**
+
+**Why "legacy" is the right word and not a compromise.** *Legend* is a claim about the
+athlete's fame, undeliverable and unfalsifiable. *Legacy* is a claim about the object
+enduring, which is literally deliverable with cotton rag and reversible mounting. It also
+pays into the Approach step 04 close ("Seasons end. This does not.") and it is a parent's
+word rather than a fourteen-year-old's. Keep this distinction if the line is ever
+revisited: the aspiration is allowed, the unverifiable claim about the child is not.
+
+**2. `Hero.astro` lines 27 to 28 is CLOSED.** That was session 11's designated pickup
+point. The new headline orphaned the old lead, which existed to pay off "the one in their
+head," so it was rewritten rather than fine-tuned. It now reads: "A legacy has to hang
+somewhere. The session, the compositing, the print: all of it exists to produce one
+finished piece, and to build it well enough to stay there." The first sentence cashes the
+abstract word into a physical object, which was Brandon's chosen job for it. One conflict
+was caught and resolved during drafting: his selected draft opened "A season lasts a few
+months," which is the same move step 04 closes on, and would have spent the close early.
+The three nouns still preview Approach steps 02, 03 and 04.
+
+**3. Eight structured questions drove a full-page copy review.** Decisions taken:
+
+- **Tier names came off the status ladder.** `Future Star` → **The Portrait**,
+  `Future Legend` → **The Series**, `Champion's Legacy` → **The Framed Piece**. Two reasons:
+  "legacy" could not be both the brand promise and the name of only the most expensive tier,
+  or the cheaper two read as the versions where you do not get the thing the headline sold;
+  and `Future Star` / `Future Legend` were themselves the hype register that fights the
+  archival positioning. Names now describe scope. **Prices did not move.**
+- **The conservation spec moved to the point of purchase.** The top tier previously said
+  "Framed archival print with anti-reflection glass," which did not match the locked
+  materials direction and omitted every fact that does the persuading. It now names cotton
+  rag matting, UV and anti-reflective glazing, and fully reversible mounting.
+- **An unsupportable social proof claim was cut.** "The place most families start" was
+  removed. With essentially one client it is not true, and the Cialdini pass was explicit
+  that faked proof is permanently expensive.
+- **The retired differentiator was purged from metadata.** `site.tagline` and
+  `site.description` still carried "one athlete at a time" and "one athlete, one session,
+  one finished portrait," meaning the footer and the Google snippet were still running copy
+  replaced in session 11. Both rewritten to lead with permanence.
+- **The "one ___, one ___" cadence is now reserved for the headline alone.** It was firing
+  five times across hero, Approach step 02, the Gallery intro, About, and the meta
+  description. Twice is a spine, five times is a template tell.
+- **Approach step 02 now states the session length.** Brandon's addition: "Plan on about an
+  hour, covering both static portraits and action frames." Note the tension deliberately
+  managed in the wording: an hour sits awkwardly beside "not until the clock says stop," so
+  it is phrased as "runs until the shots are right **rather than** until the clock says
+  stop," making the hour an expectation and not a limit. It is now a public promise, so it
+  needs to stay true of how sessions actually run.
+
+**4. Em dashes are gone from all visible copy, and this is a standing preference.** Brandon
+asked for every em dash removed. Six replacements in the hero lead, Approach lead, About,
+the Inquire lead and step 2, plus the wordmark's screen-reader label. Verified zero em
+dashes across all three rendered pages. En dashes were kept, since "Dallas–Fort Worth" is a
+different character and correct. Code comments were left alone, being invisible to visitors.
+**Treat this as permanent for future copy.**
+
+**5. Layout changes, all Brandon-directed.**
+
+- The hero composite moved from a right-hand column to **below** the headline block. The
+  two-column desktop layout is gone. Because the source is 4:5 portrait, a full-width
+  figure would have clamped against the old `max-height: 72vh` and letterboxed inside the
+  hairline frame, so the figure is capped at 36rem and the height cap removed.
+- `.hero__inner` is capped at **40rem**. Asked whether the hero should stay left-aligned,
+  the answer was yes per `brand.md` ("Nothing is centered"), but the 1360px shell left
+  roughly 700px of dead space to the right, which read as a missing second column rather
+  than as margin. Capping the column fixes that while keeping the left anchor.
+- **`02-jack-stadium` was dropped from the gallery** at Brandon's call. Nine images remain
+  and the grid still balances: four halves, the full-width catch frame, four halves. The
+  JPEG was left on disk, only removed from `portfolio.ts`.
+- **The "Recommended" badge is gone** from the middle tier. Removing it is what aligns the
+  three tier names, since the badge was the only thing pushing that card's heading down a
+  line. The `emphasis` flag survives and still lifts the background; only the label went.
+
+**6. Brandon's portrait is in the About section, closing an item open since session 7.**
+Cropped from a 4000x6000 full-length original down to a 4:5 head and shoulders frame at
+1600x2000, anchored on the face rather than the frame centre, with roughly 8% headroom and
+a cut at mid-chest. Source stays in OneDrive; the crop lives at `src/assets/brandon.jpg`.
+It sits right of the bio at desktop inside the same hairline frame as the hero print. This
+also closes the **"liking"** gap the Cialdini pass in `differentiator-copy.md` listed as
+open.
+
+**Corrected on the record:** commit `854b92d` from session 11 was reported here as
+unpushed. It was already on `origin/main` when this session checked, so session 11's
+rewrite had in fact been live for two days. The plan text below still says otherwise and is
+left as written.
+
+**Still open, unchanged by this session:** T-00/T-01 channel and sleep audit, Brandon's
+sign-off on `docs/turnaround-revision-policy.md`, and connecting Stripe. The archival
+pigment stock decision (item below) is also still open.
+
+**NEXT SESSION STARTS HERE: packages and pricing, as a deliberate separate workstream.**
+Brandon's explicit call this session: "I'm going to handle the packages next because
+that's going to be a separate thing." The tier names are now neutral containers, which
+clears the way. The inputs are already on disk: `docs/unit-cost-sheet.md` has all three
+tiers priced roughly 2 to 3x below cost, and the floor-up premium redirect means the live
+$399 / $599 / $849 figures are not anchors to defend. Renaming the tiers made the ladder
+read as a menu rather than a status climb, which makes the current numbers look more
+arbitrary than they did before.
+
+## Status (session 11, superseded above)
 
 **Session 11 — Week 0's unit cost sheet done; deliverable model and print allocation
 locked; GHL speed-to-lead workflow built (A1, not Pattern C — Brandon's explicit call).**

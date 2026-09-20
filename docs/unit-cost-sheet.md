@@ -5,6 +5,20 @@ bundles two separate questions — the optimal price (deferrable, needs market d
 whether the current price is above cost to deliver (never deferrable). This is the second
 question, answered with arithmetic, not strategy.
 
+**Tier names changed 2026-09-19 (session 12). This sheet still uses the old ones.** The
+analysis below is unaffected, but the mapping matters when the repricing pass runs:
+
+| Old name in this sheet | Live name | Price |
+|---|---|---|
+| Future Star | **The Portrait** | $399 |
+| Future Legend | **The Series** | $599 |
+| Champion's Legacy | **The Framed Piece** | $849 |
+
+The rename took the tiers off a status ladder (`Future Star` / `Future Legend` was the
+hype register that fights the archival positioning) and freed "legacy" to be the
+brand-level promise in the hero rather than the name of the most expensive tier. Prices
+did not move. See `differentiator-copy.md`.
+
 **Status (2026-09-16): deliverables, cost inputs, and print allocation confirmed with
 Brandon. Framing costs are estimates, not vendor quotes — flagged `[ESTIMATE]` throughout
 so a later pass can tell which numbers are still soft. A turnaround/revision policy draft

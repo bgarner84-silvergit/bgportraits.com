@@ -130,16 +130,27 @@ from the same condensed forms. Not needed to launch.
 
 ## Hero copy — decided
 
-**Locked (2026-09-16):** "One athlete. One portrait. The one in their head."
-Set over four lines, breaking after "The one". Rationale and the full option set:
+**Locked (2026-09-19, live):** "One athlete. One portrait. One legacy."
+Set over three lines, one beat per line. Rationale and the full option set:
 `differentiator-copy.md`.
 
-The earlier alternates are retired, including **"The portrait you'll frame for
-twenty years"** — the permanence idea it carried now closes the Approach section
-instead of opening the page, which is where it does more work.
+The rule that governs any future revision: the third beat may be aspirational, but it
+must be a claim about **the object enduring**, not about the athlete's standing. Cotton
+rag and reversible mounting make "legacy" deliverable. Nothing makes "star" or "legend"
+deliverable, and both read as hype to the restraint-buying parent the pricing is aimed at.
 
-Superseded working line, kept for the record: "One athlete. One portrait that owns
-the wall."
+Superseded working lines, kept so the ground is not re-covered:
+
+1. "One athlete. One portrait that owns the wall." Described the object's presence rather
+   than the work.
+2. "The portrait you'll frame for twenty years." The permanence idea it carried now closes
+   the Approach section instead of opening the page, which is where it does more work.
+3. "One athlete. One portrait. The one in their head." Locked 2026-09-16, shipped, then
+   reopened by Brandon two days later. Defensible on the craft arguments and still
+   rejected, which is the useful part of the record.
+
+**Punctuation rule (2026-09-19):** no em dashes in any visible copy. Use a colon, a full
+stop, or a comma. En dashes stay where they are correct, as in "Dallas–Fort Worth".
 
 Primary button label: "Request a session" — honest, since the form opens an
 inquiry into GoHighLevel rather than a live booking.
