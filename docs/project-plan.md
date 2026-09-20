@@ -13,7 +13,80 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-19, session 12)
+## Status — start here (updated 2026-09-20, session 13)
+
+**Session 13: the deferred pricing/offer board case ran, corrected itself mid-flight on a
+production-model disclosure, and the season plan is now locked.** No `src/` edits this
+session — the whole session was strategy, run and recorded in
+`docs/pricing-offer-board.md`. That file is now the authority on pricing and offer
+structure; this entry is the summary.
+
+**1. The board ran four genuinely independent seats** (Hormozi, Dunford, Sandler,
+Economics — method proved 2026-09-14, see `AI-Sales-Boardroom\18_MEMORY.md`) against
+Brandon's ask: build a Hormozi-style Grand Slam top-down, then a Founding Families
+capture offer, inside the 60-day football season window.
+
+**2. Mid-run, Brandon disclosed the real production model, and two seats reversed their
+own central recommendations.** He does not build composites himself — he built an
+annotation tool to spec the work, commissions execution from outside editors (~$25–$75,
+three tested), buys the layered source PSD, and does a ~0.5 hr finishing pass. That is
+roughly **4x cheaper and 6x less of his time** than the cost sheet's $370/3hr assumption.
+Hormozi and Economics were both resumed and both reversed their "cap composites at 1–2"
+rule — composites are vendor cash now, not scarce hours. Economics also retracted its own
+closing verdict that photography was a proving-ground hobby, not an income vehicle: at
+$3,500 and 4 clients/month it now models ~$80K/year. Full retraction tables in the packet.
+
+**3. Two more facts changed the plan.** Brandon has a **warm channel** — team parents, a
+coach or two, current/recent seniors connected to a local private school — which is the
+single most valuable fact in the run and the reason the season goal moved from "tight" to
+"plausible." And the one prior $200 test engagement is **not a reference customer** — the
+family didn't know what they were buying, is lower-budget, and isn't in-market. It's a
+feedback channel only. There is **zero willingness-to-pay evidence at any price**, which
+the board named as the season's actual deliverable to go get.
+
+**4. Decisions locked 2026-09-20** (full detail and reasoning in the packet's "DECIDED"
+section):
+
+| | |
+|---|---|
+| Flagship | **$3,500**, 5 composites + framed archival piece |
+| Founding Families | **$2,250 × 3 seats, hard cap** — Hormozi's figure, chosen over Economics' lower $1,650 because the channel is a closed, talkative private-school network and whatever leaks becomes the community price |
+| Published ladder | Three tiers: The Legacy Collection $5,300 (anchor) / The Legacy Commission $3,500 (flagship) / The Framed Portrait $1,950 |
+| Positioning | **Full commission reframe** before any outreach — category line, before/after, archival demoted from close to proof point, disclosure of the outsourced-execution model stated as a provenance credential, not concealed |
+| $250 Concept Session | Building it — converts the sales conversation into art direction, which is the direct fix for Brandon's stated worry that he can deliver but can't sell |
+
+**5. Brandon overrode the board's own sequencing advice, and that override is now the
+plan.** Three of four seats said outreach should lead because the channel expires with the
+season. Brandon: *"I want to feel confident by having a strong website behind me. If they
+balk, I'm just going to blame the website in my mind."* Site work is now a **hard-stopped
+precondition, capped at one week** so it can't consume the outreach window it exists to
+protect — full rewrite by **2026-09-26**, outreach begins **2026-09-29**. Saved as a
+standing working-style note (`brandon-needs-the-artifact-before-outreach` memory) since
+this is expected to recur on the insurance line.
+
+**6. New requirement surfaced this session: a physical framed sample.** Brandon needs one
+large piece framed and in hand — not billed to any client — so a skeptical prospect can be
+shown a real example in person. Uses an existing composite (almost certainly from the Jack
+Shepherd shoot), costs ~$400 cash + 1–2 hrs, and does double duty as the framed-on-wall
+photo the positioning rewrite needs. **This now shares the framing vendor's queue with
+every founding client's piece — if the vendor has lead time, order the sample first**,
+since it doesn't need to wait on a client shoot.
+
+**Not yet done, now the active queue in order:** (a) site rewrite — new ladder in
+`packages.ts`, commission-reframe copy in Hero/Approach/About, before/after asset,
+framed-on-wall photo, disclosure line — hard deadline 2026-09-26; (b) get the framing
+vendor quote **and lead time**, order the physical sample into that queue immediately;
+(c) confirm three cheap vendor questions (PSD vs. flattened file, commercial/resale rights
+assigned, whether stock sourcing is included in the $25–$75 quote); (d) write the Founding
+Families agreement (release, filming consent, testimonial spec, consequence clause);
+(e) Stripe live, retainer/deposit link, e-sign template; (f) list 20 names in the
+private-school channel, ready to reach out **2026-09-29**.
+
+**Still open from session 11, unchanged:** sign-off on `docs/turnaround-revision-policy.md`
+— now sharper, since the board flagged an undefined revision policy as a real capacity risk
+at premium prices, not just a cost one.
+
+## Status (session 12, superseded above)
 
 **Session 12: the hero was reframed a second time, the whole page was harmonized to it,
 and everything shipped to production.** Commit `d7cd7c4`, pushed, verified live against
