@@ -86,6 +86,13 @@ private-school channel, ready to reach out **2026-09-29**.
 — now sharper, since the board flagged an undefined revision policy as a real capacity risk
 at premium prices, not just a cost one.
 
+**Deferred to bgportraits, from AI-Sales-Boardroom's `18_MEMORY.md`:** that project's
+`profiles\bgportraits.md` still carries the pre-correction $399/$599/$849 ladder and the
+$370-per-composite cost model, both superseded by this session. Brandon's explicit call
+(2026-09-20): leave it for bgportraits to pick up next session rather than fix it now from
+inside the Boardroom repo. Low cost when it happens — the corrected numbers are already
+written up in `docs/pricing-offer-board.md`.
+
 ## Status (session 12, superseded above)
 
 **Session 12: the hero was reframed a second time, the whole page was harmonized to it,
