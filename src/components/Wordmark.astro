@@ -12,7 +12,7 @@ const { link = true, as: Tag = 'span' } = Astro.props;
 
 {
 	link ? (
-		<a class="wordmark" href="/" aria-label={`${site.name} — home`}>
+		<a class="wordmark" href="/" aria-label={`${site.name}, home`}>
 			{site.shortName}
 		</a>
 	) : (

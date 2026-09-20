@@ -11,7 +11,6 @@
 import type { ImageMetadata } from 'astro';
 
 import hero from '../assets/portfolio/01-jack-hero.jpg';
-import stadium from '../assets/portfolio/02-jack-stadium.jpg';
 import portrait from '../assets/portfolio/03-jack-portrait.jpg';
 import throne from '../assets/portfolio/04-jack-throne.jpg';
 import crouch from '../assets/portfolio/05-jack-crouch.jpg';
@@ -42,14 +41,6 @@ export const signatureWork = {
 } satisfies Omit<PortfolioItem, 'span'>;
 
 export const portfolio: PortfolioItem[] = [
-	{
-		image: stadium,
-		alt: 'Jack Shepherd under stadium lights — a monochrome standing portrait holding his helmet beside a full-colour figure of him running with the ball through haze.',
-		athlete: 'Jack Shepherd',
-		role: 'Wide Receiver, #13',
-		year: 'Class of 2026',
-		span: 'feature',
-	},
 	{
 		image: portrait,
 		alt: 'Jack Shepherd in his maroon Rattlers jersey, helmet held low in both gloved hands, looking directly into the camera.',

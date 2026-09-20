@@ -19,13 +19,13 @@ import { site } from '../data/site';
 			<h1 class="t-hero hero__headline">
 				One athlete.<br />
 				One portrait.<br />
-				The one<br />
-				in their head.
+				One legacy.
 			</h1>
 
 			<p class="t-lead hero__lead">
-				Your athlete already knows what the picture looks like. Everything after
-				that — the session, the compositing, the print — exists to make it real.
+				A legacy has to hang somewhere. The session, the compositing, the print:
+				all of it exists to produce one finished piece, and to build it well
+				enough to stay there.
 			</p>
 
 			<div class="hero__actions">
@@ -40,7 +40,7 @@ import { site } from '../data/site';
 					src={signatureWork.image}
 					alt={signatureWork.alt}
 					widths={[480, 720, 960, 1200]}
-					sizes="(min-width: 64rem) 40vw, 88vw"
+					sizes="(min-width: 40rem) 576px, 88vw"
 					loading="eager"
 					fetchpriority="high"
 					class="hero__image"
@@ -80,11 +80,17 @@ import { site } from '../data/site';
 		pointer-events: none;
 	}
 
+	/*
+	 * Everything in the hero is left-anchored per docs/brand.md ("Nothing is
+	 * centered"). The shell is 1360px, so without a cap the type and the print
+	 * would sit in the left half of a very wide field. Constraining the column
+	 * makes the space to the right read as deliberate margin.
+	 */
 	.hero__inner {
 		position: relative;
 		display: grid;
 		gap: clamp(2.5rem, 1rem + 6vw, 4.5rem);
-		align-items: center;
+		max-width: min(40rem, 100%);
 	}
 
 	.hero__eyebrow {
@@ -109,6 +115,16 @@ import { site } from '../data/site';
 		margin-top: 2.5rem;
 	}
 
+	/*
+	 * The print sits below the headline at a fixed print-like width rather than
+	 * filling the column. The source is 4:5, so a full-width figure would clamp
+	 * against max-height and letterbox inside the frame — capping the width
+	 * instead keeps the image at its natural aspect at every size.
+	 */
+	.hero__figure {
+		max-width: min(36rem, 100%);
+	}
+
 	/* A hairline frame — the print on the wall, no shadow, no elevation. */
 	.hero__frame {
 		border: 1px solid var(--graphite);
@@ -116,10 +132,9 @@ import { site } from '../data/site';
 	}
 
 	.hero__image {
+		display: block;
 		width: 100%;
 		height: auto;
-		max-height: 72vh;
-		object-fit: contain;
 	}
 
 	.hero__caption {
@@ -131,11 +146,5 @@ import { site } from '../data/site';
 
 	.hero__athlete {
 		color: var(--bone);
-	}
-
-	@media (min-width: 64rem) {
-		.hero__inner {
-			grid-template-columns: 1fr minmax(0, 0.85fr);
-		}
 	}
 </style>

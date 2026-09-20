@@ -2,11 +2,16 @@
 import { Image } from 'astro:assets';
 import { site } from '../data/site';
 import signature from '../assets/signature.png';
+import brandon from '../assets/brandon.jpg';
 
 /*
  * Placeholder bio. Brandon replaces this copy in Phase 4 (docs/project-plan.md).
- * The section image was removed in session 7 — it showed the client's athlete,
- * not Brandon. Follow-up item: add Brandon's own profile photo here.
+ *
+ * The section image was removed in session 7 because it showed the client's
+ * athlete rather than Brandon. Replaced 2026-09-19 with his own portrait,
+ * cropped to head and shoulders from a full-length original. This is the
+ * "liking" asset the Cialdini pass flagged as open: the page is a person
+ * making a case, so a face belongs next to it.
  */
 ---
 
@@ -17,13 +22,13 @@ import signature from '../assets/signature.png';
 				<h2 class="t-section">About</h2>
 
 				<p class="t-lead about__lead">
-					I am Brandon Garner. I photograph one athlete at a time, out of {
+					I am Brandon Garner. I build custom portraits for individual athletes, out of {
 						`${site.locality}, ${site.region}`
 					}.
 				</p>
 
 				<p class="t-body about__para">
-					I started doing this the way most people do — shooting games, handing over a
+					I started doing this the way most people do: shooting games, handing over a
 					gallery, moving on. The pictures were fine. None of them ended up on a wall.
 				</p>
 
@@ -50,6 +55,20 @@ import signature from '../assets/signature.png';
 					class="about__signature"
 				/>
 			</div>
+
+			<figure class="about__figure">
+				<div class="about__frame">
+					<Image
+						src={brandon}
+						alt="Brandon Garner, photographer, in a blue jacket against a warm grey background."
+						widths={[320, 480, 640, 960]}
+						sizes="(min-width: 64rem) 340px, 60vw"
+						loading="lazy"
+						decoding="async"
+						class="about__portrait"
+					/>
+				</div>
+			</figure>
 		</div>
 	</div>
 </section>
@@ -59,8 +78,31 @@ import signature from '../assets/signature.png';
 		border-top: 1px solid var(--graphite);
 	}
 
+	.about__grid {
+		display: grid;
+		gap: clamp(2.5rem, 1.5rem + 3vw, 4rem);
+		align-items: start;
+	}
+
 	.about__body {
 		max-width: 46rem;
+	}
+
+	/* Capped so the portrait reads as a print beside the text, not a banner. */
+	.about__figure {
+		max-width: min(21rem, 70%);
+	}
+
+	/* Same hairline treatment as the hero print. No shadow, no elevation. */
+	.about__frame {
+		border: 1px solid var(--graphite);
+		padding: clamp(0.4rem, 0.3rem + 0.4vw, 0.625rem);
+	}
+
+	.about__portrait {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 
 	.about__lead {
@@ -78,5 +120,16 @@ import signature from '../assets/signature.png';
 		height: auto;
 		margin-top: 2.25rem;
 		opacity: 0.9;
+	}
+
+	@media (min-width: 64rem) {
+		.about__grid {
+			grid-template-columns: minmax(0, 1fr) minmax(0, 0.42fr);
+			gap: clamp(3rem, 1rem + 5vw, 5rem);
+		}
+
+		.about__figure {
+			max-width: 100%;
+		}
 	}
 </style>

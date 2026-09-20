@@ -13,15 +13,19 @@ export interface Package {
 	price: string;
 	summary: string;
 	includes: string[];
-	/** Marks the tier the eye should land on first. Exactly one, or none. */
+	/**
+	 * Marks the tier the eye should land on first, rendered as a lifted
+	 * background only. The "Recommended" label was removed on 2026-09-19 so the
+	 * three tier names sit on one line.
+	 */
 	emphasis?: boolean;
 }
 
 export const packages: Package[] = [
 	{
-		name: 'Future Star',
+		name: 'The Portrait',
 		price: '$399',
-		summary: 'One session, one finished portrait. The place most families start.',
+		summary: 'A full session and one finished portrait, ready to print.',
 		includes: [
 			'Full one-on-one session, art-directed for your athlete',
 			'One finished hero composite',
@@ -30,11 +34,11 @@ export const packages: Package[] = [
 		],
 	},
 	{
-		name: 'Future Legend',
+		name: 'The Series',
 		price: '$599',
 		summary: 'A longer session, three concepts, and the first piece on the wall.',
 		includes: [
-			'Everything in Future Star',
+			'Everything in The Portrait',
 			'Extended session with multiple looks',
 			'Three finished hero composites, each a different concept',
 			'One large archival print, 16×20',
@@ -42,13 +46,13 @@ export const packages: Package[] = [
 		emphasis: true,
 	},
 	{
-		name: "Champion's Legacy",
+		name: 'The Framed Piece',
 		price: '$849',
 		summary: 'Five finished concepts from the session, one framed and ready for the wall.',
 		includes: [
-			'Everything in Future Legend',
+			'Everything in The Series',
 			'Five finished hero composites in total',
-			'Framed archival print with anti-reflection glass',
+			'Framed to conservation standard: 100% cotton rag matting, UV and anti-reflective glazing, fully reversible mounting',
 			'Full edited digital set from the session',
 		],
 	},

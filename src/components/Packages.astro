@@ -16,7 +16,6 @@ import { packages } from '../data/packages';
 			{
 				packages.map((pkg) => (
 					<article class:list={['pkg', pkg.emphasis && 'pkg--emphasis']}>
-						{pkg.emphasis && <span class="t-label pkg__flag">Recommended</span>}
 						<h3 class="t-subhead pkg__name">{pkg.name}</h3>
 						<p class="pkg__price">
 							<span>From</span>
@@ -77,10 +76,6 @@ import { packages } from '../data/packages';
 
 	.pkg--emphasis {
 		background: var(--carbon);
-	}
-
-	.pkg__flag {
-		color: var(--amber);
 	}
 
 	.pkg__price {

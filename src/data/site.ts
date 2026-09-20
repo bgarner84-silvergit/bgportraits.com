@@ -11,9 +11,9 @@ export const site = {
 	name: 'Brandon Garner Photography',
 	shortName: 'Brandon Garner',
 	url: 'https://bgportraits.com',
-	tagline: 'Custom athlete portraits, one athlete at a time.',
+	tagline: 'Custom athlete portraits, built to outlast the season.',
 	description:
-		'Brandon Garner Photography creates custom, art-directed hero portraits for individual athletes in the Dallas–Fort Worth area. One athlete, one session, one finished portrait built for the wall.',
+		'Art-directed hero portraits for individual athletes in Dallas–Fort Worth. One athlete, one portrait, built by hand and printed to last.',
 	locality: 'North Richland Hills',
 	region: 'TX',
 	address: '7921 Ember Oaks Dr, North Richland Hills, TX 76182',
