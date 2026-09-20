@@ -115,9 +115,20 @@ unpushed. It was already on `origin/main` when this session checked, so session 
 rewrite had in fact been live for two days. The plan text below still says otherwise and is
 left as written.
 
-**Still open, unchanged by this session:** T-00/T-01 channel and sleep audit, Brandon's
-sign-off on `docs/turnaround-revision-policy.md`, and connecting Stripe. The archival
-pigment stock decision (item below) is also still open.
+**T-00/T-01 CLOSED, and the silent-failure risk was wrong.** Brandon tested the live path
+himself and reported it 2026-09-19. The widget acknowledges a submission and does nothing
+further, which is correct behaviour and not a failure. Everything lands in GoHighLevel, it
+pushes a notification to his phone immediately, and the **AI conversation bot picks the
+thread up over SMS**, which is the channel it is actually enabled on. Nothing is dropped
+and nothing is unlogged. The session-10 board finding below ("a silent-failure risk in the
+widget wiring," conflict guide C-14) is **superseded by direct observation**; it was a
+reasonable inference from the channel matrix that turned out not to describe the live
+system. Second reason it was never urgent: no traffic is being driven to the site yet, by
+choice.
+
+**Still open, unchanged by this session:** Brandon's sign-off on
+`docs/turnaround-revision-policy.md`, and connecting Stripe. The archival pigment stock
+decision (item below) is also still open.
 
 **NEXT SESSION STARTS HERE: packages and pricing, as a deliberate separate workstream.**
 Brandon's explicit call this session: "I'm going to handle the packages next because
@@ -235,9 +246,11 @@ What the independent pass found that the first missed:
   photographer, where the parent never met a photographer at all. Replacement frame is
   uniqueness and permanence. Note `brand.md` already had this right ("the portrait you'll
   frame for twenty years") while `project-brief.md` positioning did not.
-- **A silent-failure risk in the widget wiring.** The LeadConnector widget is a **Live
+- ~~**A silent-failure risk in the widget wiring.**~~ The LeadConnector widget is a **Live
   Chat** channel, not SMS. A bot enabled only on SMS answers it with silence and logs
   nothing (conflict guide C-14). Folded into `Projects\GoHighLevel\CLAUDE.md` T-00.
+  **DISPROVEN 2026-09-19 by Brandon testing the live path: the widget acknowledges, the
+  lead reaches GoHighLevel, his phone is notified, and the AI bot continues over SMS.**
 
 **Brandon's call this session:** the GoHighLevel build is **infrastructure for the
 insurance line, not a photography ROI play**. Photography is the test rig. That reverted
