@@ -13,7 +13,63 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-11-11, session 15)
+## Status — start here (updated 2026-11-11, session 16)
+
+**Session 16: a codebase review and a "what would a showpiece rebuild look like" question,
+reconciled against session 15. Short addendum; session 15 below is still the main entry and
+its three calls are still open.** No `src/` edits. Brandon asked for a review of the current
+site and thoughts on a revised site that shows off what the current model can build. The
+review was done before session 15's commit had been read, then reconciled against it at his
+request.
+
+**1. Outcome: the showpiece rebuild is deferred, and Brandon agreed ("sounds good").** A
+rebuild now would be the stall session 15 item 11 names: another artifact built before the
+first sales conversation. It is gated on a trigger, not a date: the daughter's piece is
+framed and at least a few parents have reacted to it.
+
+**2. One gap in the session 15 plan, new this session: the live prices contaminate the
+parent conversations.** The plan has Brandon asking 8 to 10 parents what they would pay. Any
+of them who looks him up sees "From $399" on the live site, which anchors the answer he is
+trying to measure. "No tier changes until someone reacts" should not mean leaving the old
+prices up.
+
+**3. Proposed interim site fix, one short session, folded into proposed session A:**
+
+- Take the three prices off and replace the tiers with a single "commissions by inquiry"
+  block. Also drop `priceRange` from the structured data in `src/pages/index.astro`.
+- Pull the worst cutouts from the gallery so it is fewer and cleaner. `10-jack-catch` has
+  the athlete's hand and leg cut off in a hard straight line on the right side; `v1-review.md`
+  item 1.1 flagged the same on `05`, `07`, `09` and `11`. Only two finished composites exist
+  (`01-jack-hero`, `02-jack-stadium`), and `02` was pulled from the gallery in session 12.
+- Swap the inquiry path, only if the GoHighLevel cancellation is confirmed (session 15
+  item 7 has the order).
+
+**4. What the rebuild would be, recorded so the ground is not re-covered:**
+
+- The build as the centerpiece: a scroll-driven sequence of one frame going from raw capture
+  to cutout to scene to grade to finished piece. It is the before/after session 13 already
+  locked.
+- A full-bleed poster hero with the headline in a bottom-left credit block, which is what
+  `brand.md` already specifies ("the composite is the interface") and the current 36rem
+  framed print does not do.
+- A true-scale wall view, replaced by the real framed-on-wall photo once it exists.
+- Not in it: WebGL, an on-page AI demo, heavy motion. The buyer is a parent judging taste.
+
+**5. Collect the rebuild's material during the daughter's-piece dry run.** It costs nothing
+extra: keep the original soccer photo, the cutout, the editor's layered file, and a photo of
+the framed piece on the wall. That is the raw-to-finished sequence with a better story ("I
+made this for my daughter") and a second sport, which also fixes the all-football imagery.
+Add this to the daughter's-piece checklist when it is written.
+
+**6. Season close, as it affects the site.** The visible copy is already sport-neutral; only
+the imagery is all football. Next natural deadlines are spring sports and Class of 2027
+graduation; pick the one the parent conversations point to. A holiday-gift push is not
+realistic with no framing lead time and no first delivery to stand behind.
+
+**Not verified this session:** no build or Lighthouse run; the Lighthouse 100 figure is from
+session 5.
+
+## Status (session 15 — still current; read after the session 16 addendum above)
 
 **Session 15: a seven-week gap, a direction check, and a proposed reset. Nothing here is
 decided yet.** No `src/` edits and no pricing changes. Brandon came back after seven weeks
