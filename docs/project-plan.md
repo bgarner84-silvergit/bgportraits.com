@@ -13,7 +13,175 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-09-20, session 13)
+## Status — start here (updated 2026-11-11, session 15)
+
+**Session 15: a seven-week gap, a direction check, and a proposed reset. Nothing here is
+decided yet.** No `src/` edits and no pricing changes. Brandon came back after seven weeks
+away and questioned the whole shape of the project. This entry records what was found, what
+he said, and the plan proposed in response. **Brandon's explicit call at wrap-up: record the
+plan as PROPOSED, record the GoHighLevel cancellation as a LEANING, and flag the insurance
+line and the 90-day goal as an OPEN decision.** The session 13 queue below is stale but not
+superseded until he confirms.
+
+**1. Where the project actually stands.** The last commit before tonight was 2026-09-21
+(session 14, the three market-research docs, which never got a status entry here; see
+`dfw-market-research.md`, `senior-portrait-bundle-analysis.md`,
+`fashion-sports-portrait-analysis.md`). The session 13 queue did not move:
+
+- The site rewrite (hard deadline 2026-09-26) did not happen. `src/data/packages.ts` still
+  shows $399 / $599 / $849, not the locked $5,300 / $3,500 / $1,950 ladder.
+- Outreach (due to start 2026-09-29) did not start. No prospect conversation has happened
+  in any form.
+- The 60-day football season window (ends mid-November) has effectively closed. **Nothing
+  should be planned around that deadline anymore.**
+- The two flagged numbers from AI-Sales-Boardroom are still unchecked: Economics' "~$80K/yr"
+  is probably closer to $52K take-home at 10 hrs/week, and Dunford puts the $1,950 "Framed
+  Portrait" tier above the $1,200 to $1,500 ceiling for that pitch.
+
+**2. Brandon disclosed that he cannot fulfill the flagship today.** In his words, he
+couldn't fulfill the flagship or the frame "even if somebody paid me a bunch of money
+without taking a ton of time," could probably serve only one family, and isn't sure he can
+do the full package at all. **This breaks the premise of the session 13 Founding Families
+decision.** The board locked the full flagship at $2,250 × 3 seats and explicitly rejected
+a slimmed version, on two grounds: a family who bought a stripped version can't credibly
+endorse the flagship, and five composites yield 3.6x more portfolio per owner hour than
+one. Both grounds assumed he could deliver. What is actually unbuilt, all from the session
+13 queue: no framing vendor quote or lead time, the three vendor questions unanswered (PSD
+rights, resale rights, stock sourcing), no revision policy signed off, no Founding Families
+agreement, no Stripe or deposit link. None is hard; each is a place a paying client could
+get stuck.
+
+**3. Proposed answer to "one family at the max package, or a slimmed founding version?"**
+Slimmed, but rehearse fulfillment first.
+
+- **Do not sell the max package unbuilt.** The warm channel is a closed, talkative
+  private-school network. A late or botched first commission costs more than one lost sale,
+  because the story travels.
+- **Run the physical sample as a fulfillment dry run before selling anything.** One framed
+  piece forces the whole chain once with no client at risk: commission the composite, get
+  the PSD, get it framed, learn the lead time.
+- **Then a slimmed "Season One Founding Edition"** for one or two families: keep what makes
+  it a commission (session, composites, filmed reveal, framed piece), cut composites to
+  three or fewer. Session 14's research supports changing what the composites are over how
+  many there are.
+- **Keep the $3,500 flagship as the published north star.** A separately named founding
+  product also answers the board's price-leak worry: a leaked founding price attaches to a
+  visibly different product and can't undercut the flagship. The founding version is never
+  published on the site (the board's own rule).
+- **Recorded disagreement with the board:** "a stripped version can't endorse the flagship"
+  is overstated if the founding version is honest about what it is. A filmed reveal sells
+  the experience, not the composite count. A failed delivery is the bigger risk than a
+  smaller one.
+- **What is given up:** one or two families is a weaker willingness-to-pay signal than the
+  three seats the board planned.
+
+**4. Brandon's better idea for the sample: his own daughter, not Jack Shepherd.** Build the
+piece from his existing soccer photos of her, about $20 for the composite, so the ~$400
+framing spend produces something he keeps. Assessed as better than the Shepherd version:
+it is his to show freely, it teaches the same lead times and handoffs, and it activates the
+strongest unused pitch asset the docs already flag (`differentiator-copy.md`, Liking: he
+wants this *as a parent*). "I made this for my daughter" beats a photographer selling up.
+**One check before ordering:** confirm the old soccer files are sharp and high-resolution
+enough to print large; a big framed piece exposes soft focus.
+
+**5. "Am I really solving a pain point?"** Honest answer given: no, and don't pitch it as
+one. The framed piece is a *want*, like senior portraits or a family canvas. That changes
+the test from "do you have this problem?" to "would you pay for this?", and wants sell on
+seeing the object, which is another argument for the sample. He needs only 1 to 2 buyers a
+month, so the bet is a handful of families in one network, not a mass market. **More desk
+research will not settle it.** `dfw-market-research.md` already found the buyer has the
+money and the habit, found no demand evidence for this exact product, and said the gap can
+only be closed by talking to parents. The project has weeks of strategy and zero prospect
+conversations; that is the real risk.
+
+**6. The 24-hour athlete cutouts (Brandon raised it again).** It exists in the brief only
+as a "later phases" self-serve product, and the site currently gives a free cutout after
+purchase. Assessment: the kids' pain is real (fast, shareable content), but selling cutouts
+puts the brand back in the crowded $79 to $800 composite category the positioning exists to
+escape. **Proposed: keep it free and tied to the shoot, as a distribution mechanic, not a
+product.** The athlete gets a cutout within 24 hours, posts it, and teammates and parents
+see the work. About 15 minutes of work per athlete. No self-serve flow.
+
+**7. GoHighLevel: Brandon is LEANING toward cancelling. Not decided.** His reasoning: he
+isn't going for volume, it was a good lesson, he knows he can build the agents, and that is
+a different business line. Assessment after a self-review (the first answer argued against
+cancelling on sunk-cost grounds and was wrong): his reasoning is sound. At 1 to 2 clients a
+month from a warm channel there is no lead-volume problem, so speed-to-lead automation
+solves a problem this line doesn't have. **If he cancels, the order matters:**
+
+1. **Replace the site's inquiry path first.** The site's only way to contact him is the
+   GoHighLevel chat widget (`src/components/ChatWidget.astro`, `Inquire.astro`,
+   `src/data/site.ts`). Cancel first and the site goes dark for inquiries. Swap in a plain
+   contact form or email link.
+2. **Document the build.** Most of it is in `docs/ghl-workflows.md` and the GoHighLevel
+   project's `test-bot-instructions.md`; add screenshots of workflows and bot settings.
+3. **Then cancel.** Expect to lose the A2P registration and phone number (unverified;
+   confirm with GoHighLevel if it matters). The A2P campaign was denied once before
+   approval, so re-registering is real work, but at this volume he would text parents from
+   his own phone.
+
+Corrections to the record from the self-review: the lead-flow build is **not** a finished
+case study (phone capture is broken, Pattern C was never executed), and the skill it proved,
+training an agent that books calls, survives cancellation. Privacy and terms pages carry
+SMS language tied to the widget; revisit them when the widget comes out.
+
+**8. Open decision, flagged not made: the insurance line and the 90-day goal.**
+GoHighLevel's main justification was vendor leads for the insurance line, which is
+unlicensed, unstarted, and per `reference\trajectory.md` the worst fit for his direction.
+Cancelling quietly shelves that line and the 90-day "lead flow running end-to-end" goal in
+`about-me.md`. That should be a deliberate call. Neither `about-me.md` nor the insurance
+row was changed tonight.
+
+**9. The business-line question, and the proposed direction: offer diagnosis, not bots.**
+Brandon thinks the agent work may be a separate and more profitable line, but doesn't know
+how to get the experience to sell it. His own observation is the key: the people he knows
+don't have too many leads, they have **offer problems**. That is what the session 13
+pricing board did for him, and it is step one of the advisory model in `trajectory.md`
+(diagnose, build the measurement, embed agents). Selling a bot to someone with an offer
+problem fails; selling the diagnosis works. **Proposed: run the same Sales Boardroom offer
+diagnosis, free, for one person in his warm network.** It yields a case study with someone
+else's business in it, sales practice where he is helping instead of pitching, and a test
+of whether the Boardroom output is useful to anyone but him. This is `trajectory.md`'s own
+momentum step 2. Photography as a case study was considered and rejected for now: with zero
+sales it proves nothing.
+
+**10. The real-time listening sales assistant: proposed skip.** Brandon floated a live AI
+that listens to sales calls and supports in real time. Reasons to skip: it is a software
+product build (live audio, low latency), he doesn't code and has 5 to 10 hours a week, and
+the category is believed to have funded vendors (not verified). The valuable part is already
+his: the trained sales knowledge in the AI-Sales-Boardroom. A lighter pre-call prep and
+post-call debrief version uses it without real-time engineering. Revisit only if diagnostic
+clients ask for it.
+
+**11. The pattern named this session.** Photography stalled before the first sales
+conversation; the agent line stalls at "I don't know how to sell people." Same obstacle,
+and it will decide any line. He has not had one sales conversation in any line. Switching
+lines before the first rep moves the stall, it doesn't remove it. The free diagnostic and
+showing the framed piece to parents are the two lowest-stakes first reps available. This
+connects to the session 13 note that he needs the artifact before outreach; the physical
+piece is a far cheaper artifact than a full site rewrite.
+
+**PROPOSED plan, pending Brandon's confirmation next session:**
+
+- **Photography shrinks to one thing:** the daughter's framed piece, shown to parents when
+  done, with 8 to 10 informal conversations (not pitches: what have you done with your
+  kid's sports photos, what would you do with a piece like this, what would you pay).
+  **No site rewrite, no Founding Edition, no tier changes until someone reacts to the
+  physical piece.**
+- **Proposed session A:** if cancelling is confirmed, swap the inquiry path, document
+  GoHighLevel, cancel. Either way, check the soccer files and order the daughter's composite
+  and the framing quote (the long-lead item).
+- **Proposed session B:** pick the one person for the free offer diagnostic and prep it
+  with the Sales Boardroom.
+- **Offered, not yet written:** a conversation guide for the parent chats built to test
+  demand and give sales reps, and a checklist for the daughter's piece (file prep, vendor
+  questions, lead times).
+
+**First thing next session — three calls for Brandon to make:** (a) cancel GoHighLevel or
+not; (b) the insurance line and the 90-day goal; (c) adopt the proposed plan above or return
+to the session 13 queue. Everything else waits on those.
+
+## Status (session 13 — queue stale, proposed reset above not yet confirmed)
 
 **Session 13: the deferred pricing/offer board case ran, corrected itself mid-flight on a
 production-model disclosure, and the season plan is now locked.** No `src/` edits this
