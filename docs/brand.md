@@ -153,7 +153,9 @@ Superseded working lines, kept so the ground is not re-covered:
 stop, or a comma. En dashes stay where they are correct, as in "Dallas–Fort Worth".
 
 Primary button label: "Request a session" — honest, since the form opens an
-inquiry into GoHighLevel rather than a live booking.
+inquiry into GoHighLevel rather than a live booking. **Season One (2026-11-25):**
+the hero's primary button reads "Become a founding family" and points at the
+Founding Families section; the header keeps "Request a session".
 
 ## What this unlocks
 

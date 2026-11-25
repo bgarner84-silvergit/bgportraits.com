@@ -178,6 +178,16 @@ These refine or supersede the list above.
     figure stays "from" because session length and travel vary; large prints
     and framing outside the tiers remain quote-on-request (decision 8 stands).
 
+## Decisions locked 2026-11-25 (session 17 — founding families, no pricing)
+
+24. **No public pricing; the site is geared to Founding Families — supersedes
+    decision 23.** The three priced tiers are replaced by one Founding Families
+    section: what the commission includes, what founding families give in
+    return, and a note that pricing and founding terms come in writing after
+    the first conversation. `priceRange` removed from the structured data. No
+    seat count or composite count is published until fulfillment has been
+    rehearsed. Reasoning and open risks: `founding-families-site-evaluation.md`.
+
 ## Status
 
 Repo prepared: `rebrand` branch created, Astro scaffolded at repo root, builds

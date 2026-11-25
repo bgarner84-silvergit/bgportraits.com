@@ -13,7 +13,28 @@ Pages preview URL.
 
 ---
 
-## Status — start here (updated 2026-11-11, session 16)
+## Status — start here (updated 2026-11-25, session 17)
+
+**Session 17: site revised for Founding Families, all pricing removed. Edited and built
+locally; NOT committed or pushed** (pushing `main` publishes to bgportraits.com). Full
+evaluation, change list and risks: `docs/founding-families-site-evaluation.md`. Brief
+decision 24 supersedes decision 23.
+
+- The three priced tiers are gone, replaced by a Founding Families section (what the
+  commission includes, what families give in return, pricing sent in writing). Hero, nav,
+  About and Inquire now point at founding families. `priceRange` removed.
+- This completes the "take the prices off" half of session 16 item 3. The gallery-cutout
+  half is still open.
+- **Flagged, not changed:** Approach step 03 and About still say the composites are built
+  by hand, which conceals the outsourced-execution model. Replacement wording is in the
+  evaluation doc. Recommended before any parent sees the site.
+- Session 15's three calls (GoHighLevel, insurance line and 90-day goal, adopt the reset
+  plan) are still open.
+
+**First thing next session:** Brandon reviews the new copy and says commit and push (or
+not), and decides on the disclosure fix.
+
+## Status (session 16, superseded above)
 
 **Session 16: a codebase review and a "what would a showpiece rebuild look like" question,
 reconciled against session 15. Short addendum; session 15 below is still the main entry and
