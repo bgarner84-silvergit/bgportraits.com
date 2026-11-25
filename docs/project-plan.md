@@ -25,14 +25,17 @@ decision 24 supersedes decision 23.
   About and Inquire now point at founding families. `priceRange` removed.
 - This completes the "take the prices off" half of session 16 item 3. The gallery-cutout
   half is still open.
-- **Flagged, not changed:** Approach step 03 and About still say the composites are built
-  by hand, which conceals the outsourced-execution model. Replacement wording is in the
-  evaluation doc. Recommended before any parent sees the site.
+- **"Built by hand" claim removed (Brandon's pick, option 3).** Approach and About now
+  describe his part (brief, direction, finishing) without saying who executes the
+  composite. He discloses the supporting roles in conversation when asked. Detail in the
+  evaluation doc.
+- On branch `founding-families`, preview at
+  https://founding-families.bgportraits-rebrand.pages.dev. Not merged to `main`.
 - Session 15's three calls (GoHighLevel, insurance line and 90-day goal, adopt the reset
   plan) are still open.
 
-**First thing next session:** Brandon reviews the new copy and says commit and push (or
-not), and decides on the disclosure fix.
+**First thing next session:** Brandon reviews the preview and says whether to merge
+`founding-families` into `main` (which publishes to bgportraits.com).
 
 ## Status (session 16, superseded above)
 

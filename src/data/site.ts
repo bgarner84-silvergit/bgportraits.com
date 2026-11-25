@@ -13,7 +13,7 @@ export const site = {
 	url: 'https://bgportraits.com',
 	tagline: 'Custom athlete portraits, built to outlast the season.',
 	description:
-		'Art-directed hero portraits for individual athletes in Dallas–Fort Worth. One athlete, one portrait, built by hand and printed to last.',
+		'Art-directed hero portraits for individual athletes in Dallas–Fort Worth, planned around one athlete and printed to last.',
 	locality: 'North Richland Hills',
 	region: 'TX',
 	address: '7921 Ember Oaks Dr, North Richland Hills, TX 76182',

@@ -87,6 +87,15 @@ edits to `Hero.astro`, `About.astro`, `Inquire.astro`, `src/data/site.ts`,
 
    The About paragraph would need the same correction ("cut out by hand" goes).
 
+   **Resolved same session: Brandon chose option 3, remove the claim without naming who
+   executes.** The page no longer says the composites are built by hand; it describes his
+   part (the written brief, direction, grading and retouching). He will be candid about the
+   supporting roles in conversation when it comes up. Changed: Approach lead ("then built
+   by hand" is now "then built"), Approach step 03 (now "Directed and finished, frame by
+   frame"), the About paragraph, and `site.description`. Options considered and rejected:
+   full disclosure on the page, a one-sentence disclosure (Claude's recommendation), and
+   vague "my studio" language (ruled out as implying something untrue).
+
 3. **The gallery still shows the weak cutouts** session 16 flagged (`10-jack-catch` and the
    frame-edge masking on `05`, `07`, `09`, `11`). A founding family judging taste will see
    them. Not touched here; it is the other half of session 16's proposed interim fix.
